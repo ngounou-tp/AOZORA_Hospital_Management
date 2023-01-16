@@ -94,22 +94,16 @@ class CustomElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double heigth = MediaQuery.of(context).size.height;
-    return Padding(
-      padding: EdgeInsets.all(width / 400),
-      child: ElevatedButton(
-          onPressed: function,
-          child: Padding(
-            padding: EdgeInsets.all(width / 400),
-            child: CustomText(
-                text: name,
-                size: Responsive.isDesktop(context)
-                    ? 22
-                    : Responsive.isTablet(context)
-                        ? 18
-                        : 11,
-                color: Colors.white),
-          )),
-    );
+    return ElevatedButton(
+        onPressed: function,
+        child: CustomText(
+            text: name,
+            size: Responsive.isDesktop(context)
+                ? 22
+                : Responsive.isTablet(context)
+                    ? 18
+                    : 8,
+            color: Colors.white));
   }
 }
 
