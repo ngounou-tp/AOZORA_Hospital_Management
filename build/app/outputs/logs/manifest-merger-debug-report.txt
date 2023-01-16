@@ -1,0 +1,223 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:1:1-43:12
+MERGED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:1:1-43:12
+MERGED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\bob\Desktop\flutter\Hospital Management\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:fluttertoast] C:\Users\bob\Desktop\flutter\Hospital Management\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_secure_storage] C:\Users\bob\Desktop\flutter\Hospital Management\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\90b19449975491abe0aabb2fe88f151f\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\bob\.gradle\caches\transforms-3\a30fdaa9295cdf322808dd2fb820acf7\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\eb4433da28e453b6a7cab0829d71e676\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\1864ce2a814ae11f35ae85e86d931422\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\e2c27c26871f521714eab2fc033af236\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\bc22fe07140f080330f3aef4f7d8dc06\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.8.0] C:\Users\bob\.gradle\caches\transforms-3\ad491bad9eaeeee34bfdf454f6264189\transformed\core-1.8.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\bob\.gradle\caches\transforms-3\87786c993699634c97d1b7caa09976dc\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\bob\.gradle\caches\transforms-3\ae05a488b94e7bd8ed3d73a7660c9bb6\transformed\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\c247ddd0b4f55265366eaeaab5f23cb1\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\bob\.gradle\caches\transforms-3\a314481825e3cbd7b2111392384e0daf\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bob\.gradle\caches\transforms-3\3a138c9097e4f79567e06b2f1ee51f2a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\1f5126da0cde6ce0c149a09bed51eff6\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\bob\.gradle\caches\transforms-3\7d99792f2dfd73a6a27975f44e8cf5fc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\bob\.gradle\caches\transforms-3\0c72beff529f556f142de5607dca3f25\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\bob\.gradle\caches\transforms-3\3f6612f51132de8efb92d86792f14e98\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\bob\.gradle\caches\transforms-3\20c4a8511731ff04b6bffd34001b6b19\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\bob\.gradle\caches\transforms-3\1b84d72e662bde51cfa4f013f37947c2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:2:5-32
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:1:1-43:12
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:1:1-43:12
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:3:5-66
+MERGED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:3:5-66
+MERGED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:3:5-66
+	android:name
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:3:22-64
+application
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:4:4-42:19
+MERGED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-17:19
+MERGED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-17:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.8.0] C:\Users\bob\.gradle\caches\transforms-3\ad491bad9eaeeee34bfdf454f6264189\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0] C:\Users\bob\.gradle\caches\transforms-3\ad491bad9eaeeee34bfdf454f6264189\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bob\.gradle\caches\transforms-3\3a138c9097e4f79567e06b2f1ee51f2a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bob\.gradle\caches\transforms-3\3a138c9097e4f79567e06b2f1ee51f2a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.8.0] C:\Users\bob\.gradle\caches\transforms-3\ad491bad9eaeeee34bfdf454f6264189\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:5:9-30
+	android:icon
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:7:9-43
+	android:enableOnBackInvokedCallback
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:6:9-51
+activity#com.example.admin.MainActivity
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:8:9-36:20
+	android:launchMode
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:10:13-43
+	android:hardwareAccelerated
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:13:13-47
+	android:windowSoftInputMode
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:14:13-55
+	android:configChanges
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:12:13-163
+	android:theme
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:11:13-47
+	android:name
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:9:13-41
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:19:13-22:17
+	android:resource
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:21:15-52
+	android:name
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:20:15-70
+meta-data#io.flutter.embedding.android.SplashScreenDrawable
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:28:13-31:17
+	android:resource
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:30:15-61
+	android:name
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:29:15-79
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:32:13-35:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:33:17-68
+	android:name
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:33:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:34:17-76
+	android:name
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:34:27-74
+meta-data#flutterEmbedding
+ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:39:9-41:33
+	android:value
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:41:13-30
+	android:name
+		ADDED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml:40:13-44
+uses-sdk
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml
+MERGED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\bob\Desktop\flutter\Hospital Management\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\bob\Desktop\flutter\Hospital Management\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] C:\Users\bob\Desktop\flutter\Hospital Management\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] C:\Users\bob\Desktop\flutter\Hospital Management\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_secure_storage] C:\Users\bob\Desktop\flutter\Hospital Management\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-9:53
+MERGED from [:flutter_secure_storage] C:\Users\bob\Desktop\flutter\Hospital Management\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-9:53
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\90b19449975491abe0aabb2fe88f151f\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\90b19449975491abe0aabb2fe88f151f\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\bob\.gradle\caches\transforms-3\a30fdaa9295cdf322808dd2fb820acf7\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\bob\.gradle\caches\transforms-3\a30fdaa9295cdf322808dd2fb820acf7\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\eb4433da28e453b6a7cab0829d71e676\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\eb4433da28e453b6a7cab0829d71e676\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\1864ce2a814ae11f35ae85e86d931422\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\1864ce2a814ae11f35ae85e86d931422\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\e2c27c26871f521714eab2fc033af236\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\e2c27c26871f521714eab2fc033af236\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\bc22fe07140f080330f3aef4f7d8dc06\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\bc22fe07140f080330f3aef4f7d8dc06\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.8.0] C:\Users\bob\.gradle\caches\transforms-3\ad491bad9eaeeee34bfdf454f6264189\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0] C:\Users\bob\.gradle\caches\transforms-3\ad491bad9eaeeee34bfdf454f6264189\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\bob\.gradle\caches\transforms-3\87786c993699634c97d1b7caa09976dc\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\bob\.gradle\caches\transforms-3\87786c993699634c97d1b7caa09976dc\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\bob\.gradle\caches\transforms-3\ae05a488b94e7bd8ed3d73a7660c9bb6\transformed\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\bob\.gradle\caches\transforms-3\ae05a488b94e7bd8ed3d73a7660c9bb6\transformed\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\c247ddd0b4f55265366eaeaab5f23cb1\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\c247ddd0b4f55265366eaeaab5f23cb1\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\bob\.gradle\caches\transforms-3\a314481825e3cbd7b2111392384e0daf\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\bob\.gradle\caches\transforms-3\a314481825e3cbd7b2111392384e0daf\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bob\.gradle\caches\transforms-3\3a138c9097e4f79567e06b2f1ee51f2a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bob\.gradle\caches\transforms-3\3a138c9097e4f79567e06b2f1ee51f2a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\1f5126da0cde6ce0c149a09bed51eff6\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\bob\.gradle\caches\transforms-3\1f5126da0cde6ce0c149a09bed51eff6\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\bob\.gradle\caches\transforms-3\7d99792f2dfd73a6a27975f44e8cf5fc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\bob\.gradle\caches\transforms-3\7d99792f2dfd73a6a27975f44e8cf5fc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\bob\.gradle\caches\transforms-3\0c72beff529f556f142de5607dca3f25\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\bob\.gradle\caches\transforms-3\0c72beff529f556f142de5607dca3f25\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\bob\.gradle\caches\transforms-3\3f6612f51132de8efb92d86792f14e98\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\bob\.gradle\caches\transforms-3\3f6612f51132de8efb92d86792f14e98\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\bob\.gradle\caches\transforms-3\20c4a8511731ff04b6bffd34001b6b19\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\bob\.gradle\caches\transforms-3\20c4a8511731ff04b6bffd34001b6b19\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\bob\.gradle\caches\transforms-3\1b84d72e662bde51cfa4f013f37947c2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\bob\.gradle\caches\transforms-3\1b84d72e662bde51cfa4f013f37947c2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:flutter_secure_storage] C:\Users\bob\Desktop\flutter\Hospital Management\build\flutter_secure_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-50
+	android:targetSdkVersion
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bob\Desktop\flutter\Hospital Management\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-77
+queries
+ADDED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:15
+intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
+ADDED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:18
+action#android.intent.action.GET_CONTENT
+ADDED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-72
+	android:name
+		ADDED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:11:21-69
+data
+ADDED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-44
+	android:mimeType
+		ADDED from [:file_picker] C:\Users\bob\Desktop\flutter\Hospital Management\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:19-41
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-16:20
+	android:grantUriPermissions
+		ADDED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-47
+	android:authorities
+		ADDED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-74
+	android:exported
+		ADDED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-15:75
+	android:resource
+		ADDED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:17-72
+	android:name
+		ADDED from [:image_picker_android] C:\Users\bob\Desktop\flutter\Hospital Management\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:17-67
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\bob\.gradle\caches\transforms-3\9f8bc745be08e059e364b267f2429ea7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51

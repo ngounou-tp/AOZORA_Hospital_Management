@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bob\Desktop\flutter\Hospital Management\build\windows\CMakeFiles\a5ba2b194782a35113b6632486e98a41\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{38611690-4121-38D5-A87F-78334FC837AA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

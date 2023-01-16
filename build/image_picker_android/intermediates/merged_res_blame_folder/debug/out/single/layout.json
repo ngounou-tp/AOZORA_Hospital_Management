@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\bob\\Desktop\\flutter\\Hospital Management\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\bob\\.gradle\\caches\\transforms-3\\ad491bad9eaeeee34bfdf454f6264189\\transformed\\core-1.8.0\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\bob\\Desktop\\flutter\\Hospital Management\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\bob\\.gradle\\caches\\transforms-3\\ad491bad9eaeeee34bfdf454f6264189\\transformed\\core-1.8.0\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\bob\\Desktop\\flutter\\Hospital Management\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\bob\\.gradle\\caches\\transforms-3\\ad491bad9eaeeee34bfdf454f6264189\\transformed\\core-1.8.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\bob\\Desktop\\flutter\\Hospital Management\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout\\custom_dialog.xml",
+        "source": "C:\\Users\\bob\\.gradle\\caches\\transforms-3\\ad491bad9eaeeee34bfdf454f6264189\\transformed\\core-1.8.0\\res\\layout\\custom_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\bob\\Desktop\\flutter\\Hospital Management\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\bob\\.gradle\\caches\\transforms-3\\ad491bad9eaeeee34bfdf454f6264189\\transformed\\core-1.8.0\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\bob\\Desktop\\flutter\\Hospital Management\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\bob\\.gradle\\caches\\transforms-3\\ad491bad9eaeeee34bfdf454f6264189\\transformed\\core-1.8.0\\res\\layout\\notification_template_part_time.xml"
+    }
+]
