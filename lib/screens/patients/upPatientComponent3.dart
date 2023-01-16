@@ -35,7 +35,7 @@ class UpSection3 extends StatelessWidget {
                           ? 22
                           : Responsive.isTablet(context)
                               ? 18
-                              : 11,
+                              : 10,
                       color: Colors.blue,
                     ),
                   ),
@@ -45,7 +45,7 @@ class UpSection3 extends StatelessWidget {
                         ? 22
                         : Responsive.isTablet(context)
                             ? 18
-                            : 11,
+                            : 10,
                     color: Colors.grey,
                   )
                 ],
@@ -71,7 +71,7 @@ class UpSection3 extends StatelessWidget {
                                   ? 22
                                   : Responsive.isTablet(context)
                                       ? 18
-                                      : 11,
+                                      : 9,
                               color: Colors.white),
                         )),
                   ),
@@ -93,7 +93,7 @@ class UpSection3 extends StatelessWidget {
                                   ? 22
                                   : Responsive.isTablet(context)
                                       ? 18
-                                      : 11,
+                                      : 9,
                               color: Colors.white),
                         )),
                   ),
