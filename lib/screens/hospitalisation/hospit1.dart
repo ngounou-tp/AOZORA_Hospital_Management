@@ -142,6 +142,8 @@ class _CheckListState extends State<CheckList> {
           ),
 
           
+
+          
         ),
 
        
@@ -267,7 +269,7 @@ class _CheckListState extends State<CheckList> {
      {"id": "Share General Information & Facilitis", "name": "John Doe", "age": 40},
      {"id": "Having Medi-claim or Schedule Deposit", "name": "John Doe", "age": 40},
      {"id": "Registration Card & Fee", "name": "John Doe", "age": 40},
-     {"id": "", "name": "John Doe", "age": 40},
+    
   ];
 
 

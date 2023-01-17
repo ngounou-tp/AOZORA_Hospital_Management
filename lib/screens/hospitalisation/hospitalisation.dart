@@ -1,4 +1,4 @@
-import 'package:admin/color_constants.dart';
+
 import 'package:admin/screens/hospitalisation/element.dart';
 
 import 'package:flutter/material.dart';
@@ -597,6 +597,7 @@ Element5(),
           ),
           Container(
             width:MediaQuery.of(context).size.width-10,
+            
             child: Column(children: [
                
               currentIndex==0 ? InformationGeneral() :
