@@ -56,15 +56,20 @@ class CustomField extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double heigth = MediaQuery.of(context).size.height;
     return Container(
-      height: 100,
-      padding: EdgeInsets.all(8.0),
+      height: heigth / 9,
       child: Row(
         children: [
-          CustomText(text: name, size: 27),
+          CustomText(
+            text: name,
+            size: Responsive.isDesktop(context)
+                ? 18
+                : Responsive.isTablet(context)
+                    ? 16
+                    : 14,
+          ),
           Spacer(),
           SizedBox(
-            height: heigth / 9,
-            width: width / 2,
+            width: width / 3.5,
             child: TextFormField(
               decoration: const InputDecoration(
                 enabledBorder: OutlineInputBorder(
@@ -97,13 +102,14 @@ class CustomElevatedButton extends StatelessWidget {
     return ElevatedButton(
         onPressed: function,
         child: CustomText(
-            text: name,
-            size: Responsive.isDesktop(context)
-                ? 22
-                : Responsive.isTablet(context)
-                    ? 18
-                    : 8,
-            color: Colors.white));
+          text: name,
+          color: Colors.white,
+          size: Responsive.isDesktop(context)
+              ? 18
+              : Responsive.isTablet(context)
+                  ? 14
+                  : 10,
+        ));
   }
 }
 
@@ -128,14 +134,20 @@ class _CustomDropDownFieldState extends State<CustomDropDownField> {
     double width = MediaQuery.of(context).size.width;
     double heigth = MediaQuery.of(context).size.height;
     return Container(
-      height: 80,
+      height: heigth / 10,
       child: Row(
         children: [
-          CustomText(text: widget.fieldname, size: 25),
+          CustomText(
+            text: widget.fieldname,
+            size: Responsive.isDesktop(context)
+                ? 18
+                : Responsive.isTablet(context)
+                    ? 16
+                    : 14,
+          ),
           Spacer(),
           SizedBox(
-            height: heigth / 9,
-            width: width / 2,
+            width: width / 3.5,
             child: DropdownButtonFormField(
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
@@ -154,7 +166,11 @@ class _CustomDropDownFieldState extends State<CustomDropDownField> {
                   value: value,
                   child: CustomText(
                     text: value,
-                    size: 25,
+                    size: Responsive.isDesktop(context)
+                        ? 18
+                        : Responsive.isTablet(context)
+                            ? 16
+                            : 14,
                   ),
                 );
               }).toList(),
@@ -186,18 +202,20 @@ class _MyCalenderFieldState extends State<MyCalenderField> {
     double width = MediaQuery.of(context).size.width;
     double heigth = MediaQuery.of(context).size.height;
     return Container(
-      height: 80,
+      height: heigth / 10,
       child: Row(
         children: [
           CustomText(
             text: widget.name,
-            size: 25,
+            size: Responsive.isDesktop(context)
+                ? 18
+                : Responsive.isTablet(context)
+                    ? 16
+                    : 14,
           ),
           Spacer(),
           Container(
-              padding: EdgeInsets.all(5),
-              height: heigth / 9,
-              width: width / 2,
+              width: width / 3.5,
               child: TextFormField(
                 controller: _date,
                 decoration: InputDecoration(

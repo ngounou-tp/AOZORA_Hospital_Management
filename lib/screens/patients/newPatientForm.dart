@@ -212,9 +212,8 @@ class _NewPatientFormState extends State<NewPatientForm> {
                             size: width / 35, color: primaryColor))
                 ],
               ),
-              Responsive.isDesktop(context)
-                  ? DeskTopLayout()
-                  : currentIndex == 1
+              Responsive.isMobile(context)
+                  ? currentIndex == 1
                       ? Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: FormCreation1(),
@@ -245,30 +244,36 @@ class _NewPatientFormState extends State<NewPatientForm> {
                                       : Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: FormCreation6(),
-                                        ),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                CustomElevatedButton(
-                  name: "Enregistrer",
-                  function: () {},
-                ),
-                CustomElevatedButton(
-                  name: "Precedent",
-                  function: () {
-                    setState(() {
-                      // update your data model here
-                      currentIndex--;
-                    });
-                  },
-                ),
-                CustomElevatedButton(
-                    name: "Suivant",
-                    function: () {
-                      setState(() {
-                        // update your data model here
-                        currentIndex++;
-                      });
-                    }),
-              ])
+                                        )
+                  : Responsive.isTablet(context)
+                      ? DeskTopLayout()
+                      : DeskTopLayout(),
+              if (Responsive.isMobile(context))
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CustomElevatedButton(
+                        name: "Enregistrer",
+                        function: () {},
+                      ),
+                      CustomElevatedButton(
+                        name: "Precedent",
+                        function: () {
+                          setState(() {
+                            // update your data model here
+                            currentIndex--;
+                          });
+                        },
+                      ),
+                      CustomElevatedButton(
+                          name: "Suivant",
+                          function: () {
+                            setState(() {
+                              // update your data model here
+                              currentIndex++;
+                            });
+                          }),
+                    ])
             ]),
           ),
         ),
