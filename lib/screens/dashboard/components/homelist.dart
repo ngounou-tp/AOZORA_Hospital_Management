@@ -1,4 +1,5 @@
 import 'package:admin/screens/dashboard/page.dart';
+import 'package:admin/screens/hospitalisation/hospitalisation.dart';
 import 'package:admin/screens/patients/patient_details.dart';
 import 'package:admin/widgets/Cards.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class HomeList {
         )),
     HomeList(
         imagePath: 'assets/images/background-1.jpeg',
-        navigateScreen: HelpScreen(),
+        navigateScreen:  Hospitalisation(),
         title: MyCard2(
           num: 0,
         )),
@@ -72,3 +73,5 @@ class HomeList {
         )),
   ];
 }
+
+

@@ -1,5 +1,6 @@
 import 'package:admin/color_constants.dart';
-import 'package:admin/screens/dashboard/element.dart';
+import 'package:admin/screens/hospitalisation/element.dart';
+
 import 'package:flutter/material.dart';
 
 import 'hospi.dart';
