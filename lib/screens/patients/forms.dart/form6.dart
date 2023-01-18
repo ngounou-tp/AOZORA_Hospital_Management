@@ -1,6 +1,31 @@
+import 'package:admin/responsive.dart';
 import 'package:admin/utils/custom_ultility.dart';
 import 'package:admin/widgets/customformfields.dart';
 import 'package:flutter/material.dart';
+
+List mylist1 = [
+  CustomCheckBox(name: "Problemes cardiaque"),
+  CustomCheckBox(name: "Asthme"),
+  CustomCheckBox(name: "Cancer"),
+  CustomCheckBox(name: "Grossesse"),
+  CustomCheckBox(name: "Diabete"),
+  CustomCheckBox(name: "Anticoagulant"),
+  CustomCheckBox(name: "Epilepsie"),
+  CustomCheckBox(name: "Constipation"),
+  CustomCheckBox(name: "Desequilibre hormonal"),
+  CustomCheckBox(name: "Metalliques VIH"),
+  CustomCheckBox(name: "Dommages au colon"),
+  CustomCheckBox(name: "Gastrite"),
+  CustomCheckBox(name: "Dommages au veins"),
+  CustomCheckBox(name: "Spames"),
+  CustomCheckBox(name: "Varice"),
+  CustomCheckBox(name: "Hemophilie"),
+  CustomCheckBox(name: "Hysterectomie"),
+  CustomCheckBox(name: "Hypertension"),
+  CustomCheckBox(name: "Maladie thyroidienne"),
+  CustomCheckBox(name: "Fybromes/ Kystes"),
+  CustomCheckBox(name: "Maladie systemique")
+];
 
 class FormCreation6 extends StatefulWidget {
   const FormCreation6({Key? key}) : super(key: key);
@@ -22,86 +47,158 @@ class _FormCreation6State extends State<FormCreation6> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomText(text: "Votre Sante", size: 30),
             CustomText(
-              text:
-                  "1)Au cours de l`annee ecouler avez vous suivie au traitement chirugicale?",
-              size: 25,
+              text: "Votre Sante",
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 14,
+              color: Colors.grey,
             ),
             Row(
               children: [
-                CustomCheckBox(name: "oui"),
-                SizedBox(
-                  height: 10,
+                CustomText(
+                  text:
+                      "1)Au cours de l`annee ecouler avez vous suivie au traitement chirugicale?",
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
-                CustomCheckBox(name: "non"),
+                Spacer(),
+                if (!Responsive.isMobile(context))
+                  Row(
+                    children: [
+                      CustomCheckBox(name: "oui"),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      CustomCheckBox(name: "non"),
+                    ],
+                  ),
               ],
             ),
-            CustomText(
-              text:
-                  "2)Au cours de l`annee ecouler avez vous suivie un traitement dermatologique?",
-              size: 25,
-            ),
+            if (Responsive.isMobile(context))
+              Row(
+                children: [
+                  CustomCheckBox(name: "oui"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CustomCheckBox(name: "non"),
+                ],
+              ),
             Row(
               children: [
-                CustomCheckBox(name: "oui"),
-                SizedBox(
-                  height: 10,
+                CustomText(
+                  text:
+                      "2)Au cours de l`annee ecouler avez vous suivie un traitement dermatologique?",
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
-                CustomCheckBox(name: "non"),
+                Spacer(),
+                if (!Responsive.isMobile(context))
+                  Row(
+                    children: [
+                      CustomCheckBox(name: "oui"),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      CustomCheckBox(name: "non"),
+                    ],
+                  ),
               ],
             ),
-            CustomText(
-              text:
-                  "3)Au cours des 9 derniers mois avez vous suivez un traitement chirugicale?",
-              size: 25,
-            ),
+            if (Responsive.isMobile(context))
+              Row(
+                children: [
+                  CustomCheckBox(name: "oui"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CustomCheckBox(name: "non"),
+                ],
+              ),
             Row(
               children: [
-                CustomCheckBox(name: "oui"),
-                SizedBox(
-                  height: 10,
+                CustomText(
+                  text:
+                      "3)Au cours des 9 derniers mois avez vous suivez un traitement chirugicale?",
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
-                CustomCheckBox(name: "non"),
+                Spacer(),
+                if (!Responsive.isMobile(context))
+                  Row(
+                    children: [
+                      CustomCheckBox(name: "oui"),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      CustomCheckBox(name: "non"),
+                    ],
+                  ),
               ],
             ),
+            if (Responsive.isMobile(context))
+              Row(
+                children: [
+                  CustomCheckBox(name: "oui"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CustomCheckBox(name: "non"),
+                ],
+              ),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: CustomText(
-                  text:
-                      " 4)Avez vous un les problemes de sante suivant dans le passe ou actuellement",
-                  size: 25),
+                text:
+                    " 4)Avez vous un les problemes de sante suivant dans le passe ou actuellement",
+                size: Responsive.isDesktop(context)
+                    ? 18
+                    : Responsive.isTablet(context)
+                        ? 16
+                        : 11,
+              ),
             ),
-            CustomCheckBox(name: "Problemes cardiaque"),
-            CustomCheckBox(name: "Asthme"),
-            CustomCheckBox(name: "Cancer"),
-            CustomCheckBox(name: "Grossesse"),
-            CustomCheckBox(name: "Diabete"),
-            CustomCheckBox(name: "Anticoagulant"),
-            CustomCheckBox(name: "Epilepsie"),
-            CustomCheckBox(name: "Constipation"),
-            CustomCheckBox(name: "Desequilibre hormonal"),
-            CustomCheckBox(name: "Metalliques VIH"),
-            CustomCheckBox(name: "Dommages au colon"),
-            CustomCheckBox(name: "Gastrite"),
-            CustomCheckBox(name: "Dommages au veins"),
-            CustomCheckBox(name: "Spames"),
-            CustomCheckBox(name: "Varice"),
-            CustomCheckBox(name: "Hemophilie"),
-            CustomCheckBox(name: "Hysterectomie"),
-            CustomCheckBox(name: "Hypertension"),
-            CustomCheckBox(name: "Maladie thyroidienne"),
-            CustomCheckBox(name: "Fybromes/ Kystes"),
-            CustomCheckBox(name: "Maladie systemique"),
+            GridView.count(
+                crossAxisCount: 2,
+                mainAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
+                crossAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
+                childAspectRatio: Responsive.isDesktop(context)
+                    ? 30
+                    : Responsive.isTablet(context)
+                        ? 20
+                        : 20,
+                shrinkWrap: true,
+                children: List.generate(mylist1.length, (index) {
+                  return Center(
+                    child: mylist1[index],
+                  );
+                })),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: CustomText(
-                  text:
-                      " 5)Dressez la liste des medicaments, supplements, vitamines, diuretiques, comprimes de perte de poids etc que vous avez consommez regulierement",
-                  size: 25),
+                text:
+                    " 5)Dressez la liste des medicaments, supplements, vitamines, diuretiques, comprimes de perte de poids etc que vous avez consommez regulierement",
+                size: Responsive.isDesktop(context)
+                    ? 18
+                    : Responsive.isTablet(context)
+                        ? 16
+                        : 11,
+              ),
             ),
             SizedBox(
-              width: width,
+              width: width / 1.5,
               child: TextFormField(
                 decoration: const InputDecoration(
                   enabledBorder: OutlineInputBorder(
@@ -118,7 +215,11 @@ class _FormCreation6State extends State<FormCreation6> {
               children: [
                 CustomText(
                   text: "6)AFumez vous?",
-                  size: 25,
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
                 CustomCheckBox(name: "oui"),
                 CustomCheckBox(name: "non")
@@ -129,7 +230,11 @@ class _FormCreation6State extends State<FormCreation6> {
               children: [
                 CustomText(
                   text: "7)Faites vous de l`excercice regulierement?",
-                  size: 25,
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
                 CustomCheckBox(name: "oui"),
                 CustomCheckBox(name: "non")
@@ -140,7 +245,11 @@ class _FormCreation6State extends State<FormCreation6> {
               children: [
                 CustomText(
                   text: "8)Suivez-vous un regime?",
-                  size: 25,
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
                 CustomCheckBox(name: "oui"),
                 CustomCheckBox(name: "non")
@@ -151,7 +260,11 @@ class _FormCreation6State extends State<FormCreation6> {
               children: [
                 CustomText(
                   text: "9)Avez vous de habitude de sommeil regulier?",
-                  size: 25,
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
                 CustomCheckBox(name: "oui"),
                 CustomCheckBox(name: "non")
@@ -162,7 +275,11 @@ class _FormCreation6State extends State<FormCreation6> {
               children: [
                 CustomText(
                   text: "10)Portez-vous des lentilles de contact?",
-                  size: 25,
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
                 CustomCheckBox(name: "oui"),
                 CustomCheckBox(name: "non")
@@ -176,11 +293,19 @@ class _FormCreation6State extends State<FormCreation6> {
                   children: [
                     CustomText(
                       text: "12)Avez vous des implant mettallique",
-                      size: 25,
+                      size: Responsive.isDesktop(context)
+                          ? 18
+                          : Responsive.isTablet(context)
+                              ? 16
+                              : 11,
                     ),
                     CustomText(
                       text: "ou des stimulateurs cardiaques?",
-                      size: 25,
+                      size: Responsive.isDesktop(context)
+                          ? 18
+                          : Responsive.isTablet(context)
+                              ? 16
+                              : 14,
                     ),
                   ],
                 ),
@@ -192,76 +317,150 @@ class _FormCreation6State extends State<FormCreation6> {
               padding: const EdgeInsets.all(10.0),
               child: CustomText(
                 text: "VOTRE PEAU",
-                size: 30,
+                size: Responsive.isDesktop(context)
+                    ? 18
+                    : Responsive.isTablet(context)
+                        ? 16
+                        : 14,
                 color: Colors.grey,
               ),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Row(
+                  children: [
+                    CustomText(
+                      text:
+                          "13)A Quelle temperature ultlisez vous ultlisez vous l`eau de nettoyage a la maison?  ",
+                      size: Responsive.isDesktop(context)
+                          ? 18
+                          : Responsive.isTablet(context)
+                              ? 16
+                              : 11,
+                    ),
+                    Spacer(),
+                    if (!Responsive.isMobile(context))
+                      Row(
+                        children: [
+                          CustomCheckBox(name: "Froide"),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CustomCheckBox(name: "Tiede"),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CustomCheckBox(name: "Chaude"),
+                        ],
+                      ),
+                  ],
+                ),
+              ],
+            ),
+            if (!Responsive.isMobile(context))
+              Row(
+                children: [
+                  CustomCheckBox(name: "Froide"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CustomCheckBox(name: "Tiede"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CustomCheckBox(name: "Chaude"),
+                ],
+              ),
+            Row(
+              children: [
                 CustomText(
                   text:
-                      "13)A Quelle temperature ultlisez vous ultlisez vous l`eau de nettoyage a la maison?  ",
-                  size: 25,
+                      "13)Avez vous des problemes particuliers de peau de visage ou de corps?",
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
+                Spacer(),
+                if (!Responsive.isMobile(context))
+                  Row(
+                    children: [
+                      CustomCheckBox(name: "oui"),
+                      CustomCheckBox(name: "non"),
+                    ],
+                  ),
               ],
             ),
-            Row(
-              children: [
-                CustomCheckBox(name: "Froide"),
-                SizedBox(
-                  height: 10,
-                ),
-                CustomCheckBox(name: "Tiede"),
-                SizedBox(
-                  height: 10,
-                ),
-                CustomCheckBox(name: "Chaude"),
-              ],
-            ),
+            if (Responsive.isMobile(context))
+              Row(
+                children: [
+                  CustomCheckBox(name: "oui"),
+                  CustomCheckBox(name: "non"),
+                ],
+              ),
             CustomText(
               text:
-                  "13)Avez vous des problemes particuliers de peau de visage ou de corps?",
-              size: 25,
+                  "14)Quelle produits ultilisez vous regulierement pour les soins de votre peau",
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
-            Row(
-              children: [
-                CustomCheckBox(name: "oui"),
-                CustomCheckBox(name: "non"),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: CustomText(
-                  text:
-                      "14)Quelle produits ultilisez vous regulierement pour les soins de votre peau",
-                  size: 25),
-            ),
-            CustomCheckBox(name: "Savon"),
-            CustomCheckBox(name: "Masque"),
-            CustomCheckBox(name: "Technicien de surface"),
-            CustomCheckBox(name: "Peeling"),
-            CustomCheckBox(name: "Tonic"),
-            CustomCheckBox(name: "Produits des yeux"),
-            CustomField(name: "Autres"),
+            GridView.count(
+                crossAxisCount: 2,
+                mainAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
+                crossAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
+                childAspectRatio: Responsive.isDesktop(context)
+                    ? 30
+                    : Responsive.isTablet(context)
+                        ? 20
+                        : 20,
+                shrinkWrap: true,
+                children: List.generate(mylist2.length, (index) {
+                  return Center(
+                    child: mylist2[index],
+                  );
+                })),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomText(
-                      text: "15)Avez vous subi des peeling chimiques, laser",
-                      size: 25,
-                    ),
-                    CustomText(
-                      text: "ou demabraison",
-                      size: 25,
+                    Row(
+                      children: [
+                        CustomText(
+                          text:
+                              "15)Avez vous subi des peeling chimiques, laser ou demabraison",
+                          size: Responsive.isDesktop(context)
+                              ? 18
+                              : Responsive.isTablet(context)
+                                  ? 16
+                                  : 11,
+                        ),
+                        SizedBox(
+                          width: 40,
+                        ),
+                        if (!Responsive.isMobile(context))
+                          CustomCheckBox(name: "oui"),
+                        CustomCheckBox(name: "non"),
+                      ],
                     ),
                   ],
                 ),
-                CustomCheckBox(name: "oui"),
-                CustomCheckBox(name: "non"),
+                if (Responsive.isMobile(context))
+                  Row(
+                    children: [
+                      CustomCheckBox(name: "oui"),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      CustomCheckBox(name: "non"),
+                    ],
+                  ),
               ],
             ),
             CustomCheckBox(name: "au cours des dernier mois?"),
@@ -272,12 +471,13 @@ class _FormCreation6State extends State<FormCreation6> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomText(
-                      text: "16)Ultilisez-vous le Retin A ,Renova",
-                      size: 25,
-                    ),
-                    CustomText(
-                      text: "ou l`Adapalene?",
-                      size: 25,
+                      text:
+                          "16)Ultilisez-vous le Retin A ,Renova ou l`Adapalene?",
+                      size: Responsive.isDesktop(context)
+                          ? 18
+                          : Responsive.isTablet(context)
+                              ? 16
+                              : 11,
                     ),
                   ],
                 ),
@@ -289,7 +489,11 @@ class _FormCreation6State extends State<FormCreation6> {
             CustomText(
               text:
                   "17)Ultilisez-vous les medicament contre l`acne ou d`autres pathologies? ",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -306,7 +510,11 @@ class _FormCreation6State extends State<FormCreation6> {
               children: [
                 CustomText(
                   text: "Au cours des 6 derniers mois",
-                  size: 25,
+                  size: Responsive.isDesktop(context)
+                      ? 18
+                      : Responsive.isTablet(context)
+                          ? 16
+                          : 11,
                 ),
                 CustomCheckBox(name: "oui"),
                 CustomCheckBox(name: "non"),
@@ -316,7 +524,11 @@ class _FormCreation6State extends State<FormCreation6> {
             CustomText(
               text:
                   "Ultilisez vous regulierement des produits contenant des ingredients suivant",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -342,13 +554,22 @@ class _FormCreation6State extends State<FormCreation6> {
               padding: const EdgeInsets.all(10.0),
               child: CustomText(
                 text: "NIVEAU D`HYDRATION",
-                size: 30,
+                size: Responsive.isDesktop(context)
+                    ? 18
+                    : Responsive.isTablet(context)
+                        ? 16
+                        : 11,
                 color: Colors.grey,
               ),
             ),
             CustomText(
-                text: "Quelle quantite d`eau consommez vous quotidiennement?",
-                size: 25),
+              text: "Quelle quantite d`eau consommez vous quotidiennement?",
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -358,9 +579,14 @@ class _FormCreation6State extends State<FormCreation6> {
               ],
             ),
             CustomText(
-                text:
-                    "Combien de boissons alcolisees consommez vous par semaine?",
-                size: 25),
+              text:
+                  "Combien de boissons alcolisees consommez vous par semaine?",
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -371,15 +597,25 @@ class _FormCreation6State extends State<FormCreation6> {
               ],
             ),
             CustomText(
-                text: "Avez vous souffert des affections cuttanee suivant?",
-                size: 25),
+              text: "Avez vous souffert des affections cuttanee suivant?",
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
+            ),
             CustomCheckBox(name: "Floconnage"),
             CustomCheckBox(name: "Etancheite"),
             CustomCheckBox(name: "Secherrese evidente"),
             CustomText(
-                text:
-                    "Quelle ecran solaire FPS ultilisez vous pour votre visage?",
-                size: 25),
+              text:
+                  "Quelle ecran solaire FPS ultilisez vous pour votre visage?",
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
+            ),
             TextFormField(
               decoration: const InputDecoration(
                 enabledBorder: OutlineInputBorder(
@@ -391,9 +627,13 @@ class _FormCreation6State extends State<FormCreation6> {
               ),
             ),
             CustomText(
-                text:
-                    "Quelle ecran solaire FPS ultilisez vous pour votre corps?",
-                size: 25),
+              text: "Quelle ecran solaire FPS ultilisez vous pour votre corps?",
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
+            ),
             TextFormField(
               decoration: const InputDecoration(
                 enabledBorder: OutlineInputBorder(
@@ -408,11 +648,22 @@ class _FormCreation6State extends State<FormCreation6> {
               padding: const EdgeInsets.all(10.0),
               child: CustomText(
                 text: "ACTIVITES CAPILLAIRES",
-                size: 30,
+                size: Responsive.isDesktop(context)
+                    ? 18
+                    : Responsive.isTablet(context)
+                        ? 16
+                        : 11,
                 color: Colors.grey,
               ),
             ),
-            CustomText(text: "Vous etes entrain de bronzer?", size: 25),
+            CustomText(
+              text: "Vous etes entrain de bronzer?",
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
+            ),
             Row(
               children: [
                 CustomCheckBox(name: "oui"),
@@ -425,7 +676,11 @@ class _FormCreation6State extends State<FormCreation6> {
             CustomText(
               text:
                   "Une exposition modere au soleil provoque t-elles des brulures?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -435,7 +690,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Rougissez facilement lorsque vous etes nerveuse?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -445,7 +704,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Avez vous tendance as avoir des rougeurs?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -455,7 +718,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Souffrez-vous de problemes respiratoires?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -467,14 +734,22 @@ class _FormCreation6State extends State<FormCreation6> {
               padding: const EdgeInsets.all(10.0),
               child: CustomText(
                 text: "ACTIVITES NERVEUSE",
-                size: 30,
+                size: Responsive.isDesktop(context)
+                    ? 18
+                    : Responsive.isTablet(context)
+                        ? 16
+                        : 11,
                 color: Colors.grey,
               ),
             ),
             CustomText(
               text:
                   "Consommez-vous de boissons cafeinees(cafe, the, boissons gazeuses)?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -485,7 +760,11 @@ class _FormCreation6State extends State<FormCreation6> {
             CustomText(
               text:
                   "Ressentez vous des sensations de brulures ou de demangeaisons sur votre peau?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -495,7 +774,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Quelle est votre niveau de sensibilite a la douleur?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             CustomDropDownField(
               defaultvalue: "Normal",
@@ -504,7 +787,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Avez vous une reaction avec l'un de ces element?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -539,13 +826,21 @@ class _FormCreation6State extends State<FormCreation6> {
               padding: const EdgeInsets.all(10.0),
               child: CustomText(
                 text: "UNIQUEMENT LES CLIENTES FEMININE",
-                size: 30,
+                size: Responsive.isDesktop(context)
+                    ? 18
+                    : Responsive.isTablet(context)
+                        ? 16
+                        : 11,
                 color: Colors.grey,
               ),
             ),
             CustomText(
               text: "Ultilisez vous des contraceptifs oraux?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -555,7 +850,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Etes-vous enceinte ou essayez-vous de l'etres?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -565,7 +864,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Allaitez vous?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -575,7 +878,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Avez-vous eux une perte de grossese recente?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -587,13 +894,21 @@ class _FormCreation6State extends State<FormCreation6> {
               padding: const EdgeInsets.all(10.0),
               child: CustomText(
                 text: "UNIQUEMENT LES CLIENTES MASCULIN",
-                size: 30,
+                size: Responsive.isDesktop(context)
+                    ? 18
+                    : Responsive.isTablet(context)
+                        ? 16
+                        : 11,
                 color: Colors.grey,
               ),
             ),
             CustomText(
               text: "Quelle methode ultiliser vous pour vous raser?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -604,7 +919,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Ressentez vous une irritation apres le rasage?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -614,7 +933,11 @@ class _FormCreation6State extends State<FormCreation6> {
             ),
             CustomText(
               text: "Souffrez vous de poils incarne?",
-              size: 25,
+              size: Responsive.isDesktop(context)
+                  ? 18
+                  : Responsive.isTablet(context)
+                      ? 16
+                      : 11,
             ),
             Row(
               children: [
@@ -629,3 +952,13 @@ class _FormCreation6State extends State<FormCreation6> {
     );
   }
 }
+
+List mylist2 = [
+  CustomCheckBox(name: "Savon"),
+  CustomCheckBox(name: "Masque"),
+  CustomCheckBox(name: "Technicien de surface"),
+  CustomCheckBox(name: "Peeling"),
+  CustomCheckBox(name: "Tonic"),
+  CustomCheckBox(name: "Produits des yeux"),
+  CustomField(name: "Autres")
+];

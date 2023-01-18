@@ -37,7 +37,11 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         ),
         CustomText(
           text: widget.name,
-          size: 25,
+          size: Responsive.isDesktop(context)
+              ? 18
+              : Responsive.isTablet(context)
+                  ? 16
+                  : 14,
         ),
       ],
     );
@@ -143,7 +147,7 @@ class _CustomDropDownFieldState extends State<CustomDropDownField> {
                 ? 18
                 : Responsive.isTablet(context)
                     ? 16
-                    : 14,
+                    : 11,
           ),
           Spacer(),
           SizedBox(
@@ -170,7 +174,7 @@ class _CustomDropDownFieldState extends State<CustomDropDownField> {
                         ? 18
                         : Responsive.isTablet(context)
                             ? 16
-                            : 14,
+                            : 11,
                   ),
                 );
               }).toList(),
@@ -211,7 +215,7 @@ class _MyCalenderFieldState extends State<MyCalenderField> {
                 ? 18
                 : Responsive.isTablet(context)
                     ? 16
-                    : 14,
+                    : 11,
           ),
           Spacer(),
           Container(
