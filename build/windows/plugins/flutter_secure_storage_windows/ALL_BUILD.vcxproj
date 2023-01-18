@@ -21,7 +21,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1F11D297-1858-33B5-9A1F-8E6AE4ED4ED5}</ProjectGuid>
+    <ProjectGuid>{5A97D029-8435-3743-BD8F-018D2BE29E13}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -88,11 +88,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\bob\Desktop\flutter\Hospital Management\windows\flutter\ephemeral\.plugin_symlinks\flutter_secure_storage_windows\windows\CMakeLists.txt">
+    <CustomBuild Include="G:\aozora\AOZORA_Hospital_Management\windows\flutter\ephemeral\.plugin_symlinks\flutter_secure_storage_windows\windows\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/bob/Desktop/flutter/Hospital Management/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/windows/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule G:/aozora/AOZORA_Hospital_Management/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/windows/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/bob/Desktop/flutter/Hospital Management/windows" "-BC:/Users/bob/Desktop/flutter/Hospital Management/build/windows" --check-stamp-file "C:/Users/bob/Desktop/flutter/Hospital Management/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/generate.stamp"
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/aozora/AOZORA_Hospital_Management/windows -BG:/aozora/AOZORA_Hospital_Management/build/windows --check-stamp-file G:/aozora/AOZORA_Hospital_Management/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -101,11 +101,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bob\Desktop\flutter\Hospital Management\build\windows\plugins\flutter_secure_storage_windows\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\aozora\AOZORA_Hospital_Management\build\windows\plugins\flutter_secure_storage_windows\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/Users/bob/Desktop/flutter/Hospital Management/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/windows/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule G:/aozora/AOZORA_Hospital_Management/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/windows/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/bob/Desktop/flutter/Hospital Management/windows" "-BC:/Users/bob/Desktop/flutter/Hospital Management/build/windows" --check-stamp-file "C:/Users/bob/Desktop/flutter/Hospital Management/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/generate.stamp"
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/aozora/AOZORA_Hospital_Management/windows -BG:/aozora/AOZORA_Hospital_Management/build/windows --check-stamp-file G:/aozora/AOZORA_Hospital_Management/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -114,11 +114,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\bob\Desktop\flutter\Hospital Management\build\windows\plugins\flutter_secure_storage_windows\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">G:\aozora\AOZORA_Hospital_Management\build\windows\plugins\flutter_secure_storage_windows\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/bob/Desktop/flutter/Hospital Management/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/windows/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule G:/aozora/AOZORA_Hospital_Management/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/windows/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/bob/Desktop/flutter/Hospital Management/windows" "-BC:/Users/bob/Desktop/flutter/Hospital Management/build/windows" --check-stamp-file "C:/Users/bob/Desktop/flutter/Hospital Management/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/generate.stamp"
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/aozora/AOZORA_Hospital_Management/windows -BG:/aozora/AOZORA_Hospital_Management/build/windows --check-stamp-file G:/aozora/AOZORA_Hospital_Management/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -127,21 +127,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bob\Desktop\flutter\Hospital Management\build\windows\plugins\flutter_secure_storage_windows\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\aozora\AOZORA_Hospital_Management\build\windows\plugins\flutter_secure_storage_windows\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\bob\Desktop\flutter\Hospital Management\build\windows\ZERO_CHECK.vcxproj">
-      <Project>{F195D9E8-83A9-3FF1-A1F7-1C22621241DD}</Project>
+    <ProjectReference Include="G:\aozora\AOZORA_Hospital_Management\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{2382CA8C-37F7-3657-9FE2-6755D5422492}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\bob\Desktop\flutter\Hospital Management\build\windows\plugins\flutter_secure_storage_windows\flutter_secure_storage_windows_plugin.vcxproj">
-      <Project>{074C9ACF-B665-3724-A164-3788280A4A67}</Project>
+    <ProjectReference Include="G:\aozora\AOZORA_Hospital_Management\build\windows\plugins\flutter_secure_storage_windows\flutter_secure_storage_windows_plugin.vcxproj">
+      <Project>{6FBAA707-8429-3B6B-9A1C-E6D48C683028}</Project>
       <Name>flutter_secure_storage_windows_plugin</Name>
     </ProjectReference>
   </ItemGroup>
