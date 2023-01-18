@@ -81,7 +81,49 @@ class _DetailJuridiqueState extends State<DetailJuridique> {
               height: 80,
               width: 200,
             child:RadioListTile(
-            title: Text("Male"),
+            title: Text("oui"),
+            value: "male", 
+            groupValue: "male", 
+            onChanged: (value){
+              setState(() {
+
+              });
+            },
+)
+              ),
+
+             
+          ],),
+
+         
+         
+          
+        ),
+
+
+
+         Container(
+          height: 30,
+          
+          child: Row(children: [
+            
+           SizedBox(
+             child: Container(
+                 height: 80,
+                width: 200,
+                 child: Text("", 
+             style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+          
+              ),),
+               ),
+           ),
+           SizedBox(
+              height: 80,
+              width: 200,
+            child:RadioListTile(
+            title: Text("non"),
             value: "male", 
             groupValue: "male", 
             onChanged: (value){

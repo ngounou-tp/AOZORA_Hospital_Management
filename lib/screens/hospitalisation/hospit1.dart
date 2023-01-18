@@ -140,16 +140,30 @@ class _CheckListState extends State<CheckList> {
             ),
           
           ),
-
-          
-
           
         ),
 
        
       
     
-    ),    
+    ),   
+
+    ElevatedButton(
+                 
+                  onPressed: () {},
+                   style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.blue),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('Ajouter une ligne', style: TextStyle(
+                   color: Colors.white,
+                  ),),   
+                    ],
+                  ),
+                ), 
 
 
        Container(
@@ -226,6 +240,8 @@ class _CheckListState extends State<CheckList> {
          
             ],
 
+            
+
             rows: List.generate(
               checkliste.length,
               (index) => DataRow(
@@ -248,12 +264,28 @@ class _CheckListState extends State<CheckList> {
           ),
 
           
-        ),
 
-       
-      
+          
+        ),
     
     ),  
+
+     ElevatedButton(
+                 
+                  onPressed: () {},
+                   style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.blue),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('Ajouter une ligne', style: TextStyle(
+                   color: Colors.white,
+                  ),),   
+                    ],
+                  ),
+                ), 
 
        
       ],
@@ -276,8 +308,6 @@ class _CheckListState extends State<CheckList> {
     final List checkliste = [
     {"id": "", "name": "John Doe", "age": 40},
      {"id": "", "name": "John Doe", "age": 40},
-     {"id": "", "name": "John Doe", "age": 40},
-      {"id": "", "name": "John Doe", "age": 40},
     
     
   ];
