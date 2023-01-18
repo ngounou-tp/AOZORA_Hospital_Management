@@ -16,14 +16,13 @@ const fond = Color(0xebeef7);
 const barMenu = Color(0xFF181D00);
 
 const backgroundColor = Color(0xF5F5F5F5);
-const background = Color.fromRGBO(235,238,247,1);
+const background = Color.fromRGBO(235, 238, 247, 1);
 const defaultPadding = 16.0;
 const double defaultBorderRadius = 15;
 const textFieldColor = Color(0xF5E5F2FC);
 const drawerColor = Color(0xFF212121);
 const textColor = Color(0xFFFFFFFF);
-const ColorBlue = Color.fromRGBO(70,83,179,1);
-
+const ColorBlue = Color.fromRGBO(70, 83, 179, 1);
 
 class Palette {
   static const Color background = Color(0xFFFFFFFF);

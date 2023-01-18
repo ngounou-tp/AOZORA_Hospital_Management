@@ -1,6 +1,6 @@
-^C:\USERS\BOB\DESKTOP\FLUTTER\HOSPITAL MANAGEMENT\BUILD\WINDOWS\CMAKEFILES\0368BC895A2C29E7934283BD29E26D3F\GENERATE.STAMP.RULE
+^G:\ARMEL\GIT\AOZORA_HOSPITAL_MANAGEMENT\BUILD\WINDOWS\CMAKEFILES\053F7C5F9E47F63FA1A7509BFF14B7BA\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/bob/Desktop/flutter/Hospital Management/windows" "-BC:/Users/bob/Desktop/flutter/Hospital Management/build/windows" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/bob/Desktop/flutter/Hospital Management/build/windows/flutter_admin_portal.sln"
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/ARMEL/git/AOZORA_Hospital_Management/windows -BG:/ARMEL/git/AOZORA_Hospital_Management/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/ARMEL/git/AOZORA_Hospital_Management/build/windows/flutter_admin_portal.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

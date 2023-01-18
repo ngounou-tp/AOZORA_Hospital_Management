@@ -1,6 +1,6 @@
-^C:\USERS\BOB\DESKTOP\FLUTTER\HOSPITAL MANAGEMENT\BUILD\WINDOWS\CMAKEFILES\F4F97FCB8093825E724CAC9447FA22FB\FLUTTER_WINDOWS.DLL.RULE
+^G:\ARMEL\GIT\AOZORA_HOSPITAL_MANAGEMENT\BUILD\WINDOWS\CMAKEFILES\5061FC7CA6B32506964FB20B01CB06A9\FLUTTER_WINDOWS.DLL.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\src\flutter "PROJECT_DIR=C:\Users\bob\Desktop\flutter\Hospital Management" FLUTTER_ROOT=C:\src\flutter "FLUTTER_EPHEMERAL_DIR=C:\Users\bob\Desktop\flutter\Hospital Management\windows\flutter\ephemeral" "PROJECT_DIR=C:\Users\bob\Desktop\flutter\Hospital Management" "FLUTTER_TARGET=C:\Users\bob\Desktop\flutter\Hospital Management\lib\main.dart" DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false "PACKAGE_CONFIG=C:\Users\bob\Desktop\flutter\Hospital Management\.dart_tool\package_config.json" C:/src/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=G:\ARMEL\flutter_windows_3.0.0-stable\flutter PROJECT_DIR=G:\ARMEL\git\AOZORA_Hospital_Management FLUTTER_ROOT=G:\ARMEL\flutter_windows_3.0.0-stable\flutter FLUTTER_EPHEMERAL_DIR=G:\ARMEL\git\AOZORA_Hospital_Management\windows\flutter\ephemeral PROJECT_DIR=G:\ARMEL\git\AOZORA_Hospital_Management FLUTTER_TARGET=G:\ARMEL\git\AOZORA_Hospital_Management\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=G:\ARMEL\git\AOZORA_Hospital_Management\.dart_tool\package_config.json G:/ARMEL/flutter_windows_3.0.0-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -8,7 +8,7 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\BOB\DESKTOP\FLUTTER\HOSPITAL MANAGEMENT\BUILD\WINDOWS\CMAKEFILES\618C7BA1B4C61CA3BBC793564CFB231B\FLUTTER_ASSEMBLE.RULE
+^G:\ARMEL\GIT\AOZORA_HOSPITAL_MANAGEMENT\BUILD\WINDOWS\CMAKEFILES\EAB9E3800F0EBF25E44AE7D5A56485BE\FLUTTER_ASSEMBLE.RULE
 setlocal
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -16,9 +16,9 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\BOB\DESKTOP\FLUTTER\HOSPITAL MANAGEMENT\WINDOWS\FLUTTER\CMAKELISTS.TXT
+^G:\ARMEL\GIT\AOZORA_HOSPITAL_MANAGEMENT\WINDOWS\FLUTTER\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/bob/Desktop/flutter/Hospital Management/windows" "-BC:/Users/bob/Desktop/flutter/Hospital Management/build/windows" --check-stamp-file "C:/Users/bob/Desktop/flutter/Hospital Management/build/windows/flutter/CMakeFiles/generate.stamp"
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/ARMEL/git/AOZORA_Hospital_Management/windows -BG:/ARMEL/git/AOZORA_Hospital_Management/build/windows --check-stamp-file G:/ARMEL/git/AOZORA_Hospital_Management/build/windows/flutter/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
