@@ -11,12 +11,15 @@ class LayoutScreen extends StatelessWidget {
     return Scrollbar(
       thumbVisibility: true,
       interactive: true,
-      child: SingleChildScrollView(
-          child: Column(
+      child: Column(
         children: [
           UpSection2(),
+          SingleChildScrollView(
+              child: Column(
+            children: [],
+          )),
         ],
-      )),
+      ),
     );
   }
 }

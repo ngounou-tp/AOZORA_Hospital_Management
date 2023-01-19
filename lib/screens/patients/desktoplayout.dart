@@ -31,8 +31,9 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
         FormCreation1(),
         Responsive.isDesktop(context)
             ? Container(
-                height: heigth / 10,
+                height: heigth / 13,
                 color: Colors.white,
+                padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -40,6 +41,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Informations Generales",
                           color: myindex == 2 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -52,6 +58,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Informations sur l'hospital",
                           color: myindex == 3 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -64,6 +75,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Evaluation Clinique",
                           color: myindex == 4 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -76,6 +92,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Maladies",
                           color: myindex == 5 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -89,6 +110,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Historique Clinique",
                           color: myindex == 6 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -101,6 +127,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Apparence",
                           color: myindex == 7 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -113,6 +144,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Chirugies",
                           color: myindex == 8 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -125,6 +161,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Famille",
                           color: myindex == 9 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -137,7 +178,7 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
               )
             : Container(
                 color: Colors.white,
-                height: heigth / 7,
+                height: heigth / 8,
                 child: Column(children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -146,6 +187,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Informations Generales",
                           color: myindex == 2 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -158,6 +204,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Informations sur l'hospital",
                           color: myindex == 3 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -170,6 +221,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Evaluation Clinique",
                           color: myindex == 4 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -182,6 +238,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Maladies",
                           color: myindex == 5 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -195,6 +256,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         child: CustomText(
                           text: "Historique Clinique",
                           color: myindex == 6 ? Colors.blue : col,
+                          size: Responsive.isDesktop(context)
+                              ? 14
+                              : Responsive.isTablet(context)
+                                  ? 14
+                                  : 11,
                         ),
                         onPressed: () {
                           setState(() {
@@ -213,6 +279,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                           child: CustomText(
                             text: "Apparence",
                             color: myindex == 7 ? Colors.blue : col,
+                            size: Responsive.isDesktop(context)
+                                ? 14
+                                : Responsive.isTablet(context)
+                                    ? 14
+                                    : 11,
                           ),
                           onPressed: () {
                             setState(() {
@@ -225,6 +296,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                           child: CustomText(
                             text: "Chirugies",
                             color: myindex == 8 ? Colors.blue : col,
+                            size: Responsive.isDesktop(context)
+                                ? 14
+                                : Responsive.isTablet(context)
+                                    ? 14
+                                    : 11,
                           ),
                           onPressed: () {
                             setState(() {
@@ -237,6 +313,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                           child: CustomText(
                             text: "Famille",
                             color: myindex == 9 ? Colors.blue : col,
+                            size: Responsive.isDesktop(context)
+                                ? 14
+                                : Responsive.isTablet(context)
+                                    ? 14
+                                    : 11,
                           ),
                           onPressed: () {
                             setState(() {
