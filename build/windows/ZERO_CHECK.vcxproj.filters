@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\bob\Desktop\flutter\Hospital Management\build\windows\CMakeFiles\0368bc895a2c29e7934283bd29e26d3f\generate.stamp.rule">
+    <CustomBuild Include="G:\aozora\AOZORA_Hospital_Management\build\windows\CMakeFiles\3fcca6e790dd32d49db9606d262bff4d\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{38611690-4121-38D5-A87F-78334FC837AA}</UniqueIdentifier>
+      <UniqueIdentifier>{55A878A5-BD22-341E-8BCB-8014FDE0B8D0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
