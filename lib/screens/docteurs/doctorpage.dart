@@ -1,10 +1,12 @@
 import 'package:admin/color_constants.dart';
+import 'package:admin/screens/hospitalisation/hospit2.dart';
 import 'package:admin/utils/app_theme.dart';
 import 'package:colorize_text_avatar/colorize_text_avatar.dart';
 import 'package:admin/screens/docteurs/widgetsdortorform.dart';
 import 'package:dropdown_textfield/dropdown_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'widgetdoctor.dart';
 
 class Doctor extends StatefulWidget {
   @override
@@ -418,7 +420,56 @@ class _DoctorState extends State<Doctor> {
                                 'INFORMATIONS GENERALES',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.grey),
+                                    color: indexbutton == 1
+                                        ? Colors.blue
+                                        : Colors.grey),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  minimumSize: Size(120, 50)),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                setState(() {
+                                  indexbutton = 2;
+                                });
+                              },
+                              style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.white),
+                                  padding: MaterialStateProperty.all(
+                                      EdgeInsets.all(20)),
+                                  textStyle: MaterialStateProperty.all(
+                                      TextStyle(fontSize: 15))),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    'CHECKLIST',
+                                    style: TextStyle(
+                                        color: indexbutton == 2
+                                            ? Colors.blue
+                                            : Colors.grey),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            ElevatedButton.icon(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.traffic,
+                                color: Colors.grey,
+                              ),
+                              label: Text(
+                                'INFOS PERSONELLES',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: indexbutton == 7
+                                        ? Colors.blue
+                                        : Colors.grey),
                               ),
                               style: ElevatedButton.styleFrom(
                                   primary: Colors.white,
@@ -431,31 +482,286 @@ class _DoctorState extends State<Doctor> {
                                 color: Colors.grey,
                               ),
                               label: Text(
-                                'INFOS PERSONELLES',
+                                'COMMISSIONS D' '"AFFAIRES',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.grey),
+                                    color: indexbutton == 1
+                                        ? Colors.blue
+                                        : Colors.grey),
                               ),
-                              style: ElevatedButton.styleFrom(
-                                  primary: Colors.white,
-                                  minimumSize: Size(120, 50)),
-                            ),
-                            ElevatedButton.icon(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.traffic,
-                                color: Colors.grey,
-                              ),
-                              label: Text('COMMISSIONS D' '"AFFAIRES',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey)),
                               style: ElevatedButton.styleFrom(
                                   primary: Colors.white,
                                   minimumSize: Size(120, 50)),
                             )
                           ],
-                        )
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width - 10,
+                          child: Column(children: [
+                            //indexbutton == 0
+                            // ? InformationGeneral() :
+
+                            // indexbutton==1 ? CheckList() :
+
+                            indexbutton == 2
+                                ? EvaluationClinic()
+                                :
+
+                                // indexbutton==3 ?  DetailJuridique() :
+
+                                SizedBox()
+                          ]),
+                        ),
+                        Container(
+                          //  width: 500,
+                          //  height: 600,
+                          child: Row(
+                            children: [
+                              Column(
+                                children: [
+                                  SizedBox(
+                                    child: Container(
+                                      margin: const EdgeInsets.all(5.0),
+                                      padding: const EdgeInsets.all(0.100),
+                                      width: 200,
+                                      height: 450,
+                                      child: ListView(
+                                        children: [
+                                          Text('Adresse'),
+                                          SizedBox(
+                                            height: 40,
+                                          ),
+                                          Text('Lien vers un site web'),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Text(
+                                              'Reservation en ligne autorisee'),
+                                          SizedBox(
+                                            height: 40,
+                                          ),
+                                          Text(
+                                              'Reservation de visite a domicile autorisee'),
+                                          SizedBox(
+                                            height: 30,
+                                          ),
+                                          Text('Montrer les frais'),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Text('Informations de base'),
+                                          SizedBox(
+                                            height: 30,
+                                          ),
+                                          Text('Telephone'),
+                                          Text('Mobile'),
+                                          Text('Couriel'),
+                                          Text('TVA/Numero fiscal'),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  SizedBox(
+                                      width: 300,
+                                      height: 450,
+                                      child: Container(
+                                        child: ListView(
+                                          children: [
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                            Checkbox(
+                                              value: isChecked,
+                                              activeColor: Colors.blueAccent,
+                                              onChanged: (value) {
+                                                setState(() {
+                                                  isChecked = value!;
+                                                });
+                                              },
+                                            ),
+                                            Checkbox(
+                                              value: isChecked,
+                                              activeColor: Colors.blueAccent,
+                                              onChanged: (value) {
+                                                setState(() {
+                                                  isChecked = value!;
+                                                });
+                                              },
+                                            ),
+                                            Checkbox(
+                                              value: isChecked,
+                                              activeColor: Colors.blueAccent,
+                                              onChanged: (value) {
+                                                setState(() {
+                                                  isChecked = value!;
+                                                });
+                                              },
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                            TextFormField(
+                                              decoration: InputDecoration(
+                                                filled: true,
+                                                fillColor: Color.fromARGB(
+                                                    255, 199, 187, 187),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            width: 1,
+                                                            color: Colors
+                                                                .blueGrey)),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      )),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
