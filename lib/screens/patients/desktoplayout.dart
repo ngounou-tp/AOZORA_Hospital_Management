@@ -6,6 +6,8 @@ import 'package:admin/screens/patients/forms.dart/form4.dart';
 import 'package:admin/screens/patients/forms.dart/form5.dart';
 import 'package:admin/screens/patients/forms.dart/form6.dart';
 import 'package:admin/screens/patients/forms.dart/form7.dart';
+import 'package:admin/screens/patients/forms.dart/form8.dart';
+import 'package:admin/screens/patients/forms.dart/form9.dart';
 import 'package:admin/utils/custom_ultility.dart';
 import 'package:flutter/material.dart';
 
@@ -341,7 +343,11 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                         ? FormCreation5()
                         : myindex == 6
                             ? FormCreation6()
-                            : FormCreation7()
+                            : myindex == 7
+                                ? FormCreation7()
+                                : myindex == 8
+                                    ? FormCreation8()
+                                    : FormCreation9()
       ],
     );
   }
