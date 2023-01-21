@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/bob/Desktop/flutter/Hospital Management/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/windows
+# Install script for directory: G:/aozora/AOZORA_Hospital_Management/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows/windows
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

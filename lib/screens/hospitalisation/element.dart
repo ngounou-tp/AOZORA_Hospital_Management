@@ -846,9 +846,9 @@ class Element13 extends StatefulWidget {
 }
 
 class _Element13State extends State<Element13> {
+    bool? check1 = false;
   @override
   Widget build(BuildContext context) {
-    var dropdownValue='Dis';
     return SizedBox(
       height: 100,
       child: Row(
@@ -864,44 +864,21 @@ class _Element13State extends State<Element13> {
         
           ),),
            ),
-          SizedBox(
+             SizedBox(
             height: 80,
             width: 200,
-            child: DropdownButtonFormField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  //<-- SEE HERE
-                  borderSide:
-                      BorderSide(color: Colors.grey, width: 2),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  //<-- SEE HERE
-                  borderSide:
-                      BorderSide(color: Colors.grey, width: 2),
-                ),
-                filled: true,
-              ),
-              value: dropdownValue,
-              onChanged: (String? newValue) {
-                setState(() {
-                  dropdownValue = newValue!;
-                });
-              },
-              items: <String>[
-                'Dis',
-                'Cat',
-                'Tiger',
-                'Lion'
-              ].map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(
-                    value,
-                    style: TextStyle(fontSize: 10),
-                  ),
-                );
-              }).toList(),
-            )),
+            child:Checkbox( //only check box
+              value: check1, //unchecked
+              onChanged: (bool? value){
+                  //value returned when checkbox is clicked
+                  setState(() {
+                      check1 = value;
+                  });
+              }
+            )
+            ),
+
+
         ],
       ),
     );

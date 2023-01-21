@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/bob/Desktop/flutter/Hospital Management/windows/flutter
+# Install script for directory: G:/aozora/AOZORA_Hospital_Management/windows/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

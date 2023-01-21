@@ -567,8 +567,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                     Icons.close,
                                     size: 14,
                                   ),
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.grey),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -584,8 +582,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                           size: 14,
                                         )
                                       : SizedBox(),
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.green),
                                   onPressed: () {
                                     setState(() {
                                       if (codeController.text.isNotEmpty) {
@@ -697,8 +693,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                       Icons.close,
                                       size: 14,
                                     ),
-                                    style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.grey),
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },
@@ -714,8 +708,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                             size: 14,
                                           )
                                         : SizedBox(),
-                                    style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.green),
                                     onPressed: () {
                                       setState(() {
                                         if (codeController.text.isNotEmpty) {
