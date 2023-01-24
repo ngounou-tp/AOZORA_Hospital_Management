@@ -21,79 +21,84 @@ class _FormCreation7State extends State<FormCreation7> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double heigth = MediaQuery.of(context).size.height;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        if (myindex == 7)
-          Container(
-            height: heigth / 12,
-            padding: EdgeInsets.all(8),
-            width: Responsive.isDesktop(context)
-                ? width / 1.5
-                : Responsive.isTablet(context)
-                    ? width
-                    : width,
-            color: Colors.white,
-            child: Row(children: [
-              TextButton(
-                child: CustomText(
-                  text: " ANALYSE DU CORPS",
-                  color: index == 1 ? Colors.blue : col,
-                  size: Responsive.isDesktop(context)
-                      ? 14
-                      : Responsive.isTablet(context)
-                          ? 14
-                          : 11,
-                ),
-                onPressed: () {
-                  setState(() {
-                    // update your data model here
-                    index = 1;
-                  });
-                },
-              ),
-              TextButton(
-                child: CustomText(
-                  text: "ANALYSE DE LA PEAU(VISAGE)",
-                  color: index == 2 ? Colors.blue : col,
-                  size: Responsive.isDesktop(context)
-                      ? 14
-                      : Responsive.isTablet(context)
-                          ? 14
-                          : 11,
-                ),
-                onPressed: () {
-                  setState(() {
-                    // update your data model here
-                    index = 2;
-                  });
-                },
-              ),
-              TextButton(
-                child: CustomText(
-                  text: "TEST CUTANEE PROTOTYPE",
-                  color: index == 3 ? Colors.blue : col,
-                  size: Responsive.isDesktop(context)
-                      ? 14
-                      : Responsive.isTablet(context)
-                          ? 14
-                          : 11,
-                ),
-                onPressed: () {
-                  setState(() {
-                    // update your data model here
-                    index = 3;
-                  });
-                },
-              ),
-            ]),
-          ),
-        index == 1
-            ? Form1()
-            : index == 2
-                ? Form2()
-                : Form3()
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 10.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (myindex == 7)
+            Container(
+              height: heigth / 13,
+              padding: EdgeInsets.all(8),
+              color: Colors.white,
+              width: Responsive.isDesktop(context)
+                  ? width / 2
+                  : Responsive.isTablet(context)
+                      ? width
+                      : width,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    TextButton(
+                      child: CustomText(
+                        text: " Analyse du corps",
+                        color: index == 1 ? Colors.blue : col,
+                        size: Responsive.isDesktop(context)
+                            ? 14
+                            : Responsive.isTablet(context)
+                                ? 14
+                                : 11,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          // update your data model here
+                          index = 1;
+                        });
+                      },
+                    ),
+                    TextButton(
+                      child: CustomText(
+                        text: "Analyse de la peau(visage)",
+                        color: index == 2 ? Colors.blue : col,
+                        size: Responsive.isDesktop(context)
+                            ? 14
+                            : Responsive.isTablet(context)
+                                ? 14
+                                : 11,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          // update your data model here
+                          index = 2;
+                        });
+                      },
+                    ),
+                    TextButton(
+                      child: CustomText(
+                        text: "Test cutanee prototype",
+                        color: index == 3 ? Colors.blue : col,
+                        size: Responsive.isDesktop(context)
+                            ? 14
+                            : Responsive.isTablet(context)
+                                ? 14
+                                : 11,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          // update your data model here
+                          index = 3;
+                        });
+                      },
+                    ),
+                  ]),
+            ),
+          index == 1
+              ? Form1()
+              : index == 2
+                  ? Form2()
+                  : Form3()
+        ],
+      ),
     );
   }
 }

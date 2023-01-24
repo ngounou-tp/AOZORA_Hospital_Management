@@ -43,7 +43,7 @@ class _NewPatientFormState extends State<NewPatientForm> {
               : Responsive.isTablet(context)
                   ? width - 50
                   : width - 30,
-          color: Colors.white,
+          color: Colors.white30,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListView(

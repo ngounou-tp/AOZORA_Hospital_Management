@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:admin/color_constants.dart';
 import 'package:admin/responsive.dart';
 import 'package:admin/screens/patients/formheader.dart';
 import 'package:admin/widgets/customformfields.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 class FormCreation1 extends StatefulWidget {
@@ -17,6 +20,7 @@ class _FormCreation1State extends State<FormCreation1> {
     double width = MediaQuery.of(context).size.width;
     double heigth = MediaQuery.of(context).size.height;
     final _formKey1 = GlobalKey<FormState>();
+
     // ignore: unused_local_variable
     return Container(
       color: backgroundColor,
@@ -105,19 +109,38 @@ final mylist = [
   )
 ];
 
-class ImageUpload extends StatelessWidget {
+class ImageUpload extends StatefulWidget {
   const ImageUpload({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<ImageUpload> createState() => _ImageUploadState();
+}
+
+class _ImageUploadState extends State<ImageUpload> {
+  @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double heigth = MediaQuery.of(context).size.height;
+    List fileList = [];
+    // ignore: unused_element
+    imagePicker() async {
+      FilePickerResult? pickedScreenShots =
+          await FilePicker.platform.pickFiles(allowMultiple: false);
+      if (pickedScreenShots != null) {
+        setState(() {
+          fileList =
+              pickedScreenShots.paths.map((path) => File(path!)).toList();
+        });
+        print(fileList);
+      }
+    }
 
     return GestureDetector(
       child: Icon(Icons.photo_camera_front_outlined,
           size: width / 10, color: Colors.grey),
+      onTap: () => imagePicker(),
     );
   }
 }

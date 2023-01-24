@@ -1,5 +1,7 @@
 import 'package:admin/appbar_component/appbar_page2.dart';
 import 'package:admin/responsive.dart';
+import 'package:admin/screens/patients/patien_list_header.dart';
+
 import 'package:admin/utils/custom_ultility.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +15,46 @@ class MenuItems extends StatefulWidget {
 class _MenuItemsState extends State<MenuItems> {
   @override
   build(BuildContext context) {
+    List mylist = [
+      GestureDetector(
+        child: Button(
+          image: "assets/images/man.png",
+          text: "my table",
+        ),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PatientList()),
+          );
+        },
+      ),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+      Button(image: "assets/images/man.png", text: "my table"),
+    ];
+
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
     double width = MediaQuery.of(context).size.width;
     double heigth = MediaQuery.of(context).size.height;
@@ -61,7 +103,9 @@ class _MenuItemsState extends State<MenuItems> {
 class Button extends StatelessWidget {
   final String image;
   final String text;
-  const Button({Key? key, required this.image, required this.text})
+
+  BuildContext? context;
+  Button({Key? key, required this.image, required this.text, this.context})
       : super(key: key);
 
   @override
@@ -96,36 +140,6 @@ class Button extends StatelessWidget {
           )
         ]),
       ),
-      onTap: () {},
     );
   }
 }
-
-List mylist = [
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-  Button(image: "assets/images/man.png", text: "my table"),
-];

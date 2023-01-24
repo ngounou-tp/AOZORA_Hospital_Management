@@ -104,7 +104,6 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
                           setState(() {
                             // update your data model here
                             myindex = 5;
-                            col = Colors.black12;
                           });
                         },
                       ),
