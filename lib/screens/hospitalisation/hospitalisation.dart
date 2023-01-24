@@ -1,4 +1,5 @@
 
+import 'package:admin/responsive.dart';
 import 'package:admin/screens/hospitalisation/element.dart';
 
 import 'package:flutter/material.dart';
@@ -120,7 +121,7 @@ Element5(),
             ),
       
               SizedBox(height: 10),
-      
+            Responsive.isDesktop(context)?
             Container(
               height: 70,
                padding: const EdgeInsets.all(8.0),
@@ -148,7 +149,7 @@ Element5(),
       
                 Spacer(),
       
-      
+                   
                       ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context);
@@ -171,7 +172,7 @@ Element5(),
                   ),),
       
                   style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.brown),
+                      backgroundColor: MaterialStateProperty.all(Colors.white10),
                       padding: MaterialStateProperty.all(EdgeInsets.all(20)),
                       textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
                 ),
@@ -185,7 +186,7 @@ Element5(),
                   ),),
       
                   style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.brown),
+                      backgroundColor: MaterialStateProperty.all(Colors.white10),
                       padding: MaterialStateProperty.all(EdgeInsets.all(20)),
                       textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
                 ),
@@ -198,7 +199,7 @@ Element5(),
                   ),),
       
                   style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.brown),
+                      backgroundColor: MaterialStateProperty.all(Colors.white10),
                       padding: MaterialStateProperty.all(EdgeInsets.all(20)),
                       textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
                 ),
@@ -211,14 +212,14 @@ Element5(),
                   ),),
       
                   style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.brown),
+                      backgroundColor: MaterialStateProperty.all(Colors.white10),
                       padding: MaterialStateProperty.all(EdgeInsets.all(20)),
                       textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
                 ),
               ]),
             
-            ),
-      
+            ):
+             
                SizedBox(height: 10),
       
               Container(
@@ -466,7 +467,7 @@ Element5(),
 
                       child: GridView.count(
                                      
-                            crossAxisCount: 2,
+                            crossAxisCount: Responsive.isDesktop(context) ? 2: 1,
                             mainAxisSpacing: 8,
                             childAspectRatio: 150/15,
                             scrollDirection: Axis.vertical,

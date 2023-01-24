@@ -1,6 +1,6 @@
 
 
-import 'package:admin/utils/custom_ultility.dart';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -118,7 +118,7 @@ class _DatetextState extends State<Datetext> {
           controller: dateController, //editing controller of this TextField
             decoration: const InputDecoration( 
                       icon: Icon(Icons.calendar_today), //icon of text field
-                    labelText: "Enter Date" //label text of field
+                    labelText: "" //label text of field
               ),
             readOnly: true,  // when true user cannot edit text 
             onTap: () async {
@@ -146,6 +146,11 @@ class _DatetextState extends State<Datetext> {
   )
             
             ),
+           Icon(
+          Icons.arrow_right_alt,
+          color: Colors.black,
+          size: 20.0, // Announced in accessibility modes (e.g TalkBack/VoiceOver). This label does not show in the UI.
+        ),
                 SizedBox(
             height: 80,
             width: 100,
@@ -153,7 +158,7 @@ class _DatetextState extends State<Datetext> {
           controller: dateController, //editing controller of this TextField
             decoration: const InputDecoration( 
                       icon: Icon(Icons.calendar_today), //icon of text field
-                    labelText: "Enter Date" //label text of field
+                    labelText: "" //label text of field
               ),
             readOnly: true,  // when true user cannot edit text 
             onTap: () async {

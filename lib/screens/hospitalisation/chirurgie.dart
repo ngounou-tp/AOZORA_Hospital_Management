@@ -3,8 +3,11 @@ import 'package:admin/screens/hospitalisation/widgetForm.dart';
 import 'package:flutter/material.dart';
 
 
+import 'churiButton.dart';
 import 'elementChurie.dart';
 import 'hospitalisation.dart';
+
+ int currentIndexe = 0;   
 
 class Chirurgie extends StatefulWidget {
   const Chirurgie({Key? key}) : super(key: key);
@@ -15,8 +18,7 @@ class Chirurgie extends StatefulWidget {
 
 class _ChirurgieState extends State<Chirurgie> {
   @override
-  Widget build(BuildContext context) {
-       
+  Widget build(BuildContext context) {   
 List dat = [
 ElementChuri(),
 ElementChuri1(),
@@ -35,14 +37,12 @@ CustomField5(name: 'Nom de la chirurgie',),
     double width = MediaQuery.of(context).size.width; 
     return Scaffold(
       appBar: AppBar(),
-      body: Container(
-        width: width,
-        padding: EdgeInsets.all(15.0),
+      body:SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
+      
              Row(
                children: [
                   TextButton(
@@ -123,9 +123,9 @@ CustomField5(name: 'Nom de la chirurgie',),
                   ),
                 ],
               ),
-
-               SizedBox(height: 10),
       
+               SizedBox(height: 10),
+        
           Container(
             width:double.infinity,
             decoration: BoxDecoration(
@@ -134,80 +134,84 @@ CustomField5(name: 'Nom de la chirurgie',),
             color: Colors.grey,  // red as border color
             ),
             ),  
-            child: Row(
-               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                 mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                   ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('CONFIRMER', style: TextStyle(
+                   color: Colors.white,
+                  ),),
+        
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.indigo),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(18)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                ),
+                SizedBox(width: 10,),
                  ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('CONFIRMER', style: TextStyle(
-                 color: Colors.white,
-                ),),
-      
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.indigo),
-                    padding: MaterialStateProperty.all(EdgeInsets.all(18)),
-                    textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
-              ),
-               ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('CREER UNE FACTURE', style: TextStyle(
-                 color: Colors.white,
-                ),),
-      
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.indigo),
-                    padding: MaterialStateProperty.all(EdgeInsets.all(18)),
-                    textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
-              ),
-      
-              Spacer(),
-      
-      
-                    ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('BROUILLON', style: TextStyle(
-                 color: Colors.white,
-                ),),
-      
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.brown),
-                    padding: MaterialStateProperty.all(EdgeInsets.all(20)),
-                    textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
-              ),
-                     ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('CONFIRMER', style: TextStyle(
-                 color:  Colors.white,
-                ),),
-      
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.brown),
-                    padding: MaterialStateProperty.all(EdgeInsets.all(20)),
-                    textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
-              ),
-                    ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child:  Text('TERMINER', style: TextStyle(
-                 color: Colors.white,
-                ),),
-      
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.brown),
-                    padding: MaterialStateProperty.all(EdgeInsets.all(20)),
-                    textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
-              ),
-            ]),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('CREER UNE FACTURE', style: TextStyle(
+                   color: Colors.white,
+                  ),),
+        
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.indigo),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(18)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                ),
+        
+                Spacer(),
+        
+        
+                      ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('BROUILLON', style: TextStyle(
+                   color: Colors.white,
+                  ),),
+        
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.brown),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                ),
+                       ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('CONFIRMER', style: TextStyle(
+                   color:  Colors.white,
+                  ),),
+        
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white12),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                ),
+                      ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child:  Text('TERMINER', style: TextStyle(
+                   color: Colors.white,
+                  ),),
+        
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white12),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                ),
+              ]),
+            ),
           
           ),
           SizedBox(height: 8,),
@@ -231,7 +235,7 @@ CustomField5(name: 'Nom de la chirurgie',),
                 child: const Text('Ordonnance', style: TextStyle(
                  color: Colors.grey,
                 ),),
-      
+        
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white70),
                     padding: MaterialStateProperty.all(EdgeInsets.all(20)),
@@ -241,8 +245,7 @@ CustomField5(name: 'Nom de la chirurgie',),
             ]),
           
           ),
-              Container(
-               
+              Container(  
                padding: const EdgeInsets.all(10.0),
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
@@ -259,7 +262,7 @@ CustomField5(name: 'Nom de la chirurgie',),
                    height:MediaQuery.of(context).size.height/3,
                     child:   Container(
                             width: 900,
-
+      
                       child: Padding(
                         padding: const EdgeInsets.only(top:50),
                         child: GridView.count(
@@ -280,8 +283,165 @@ CustomField5(name: 'Nom de la chirurgie',),
                   ),
                 ],
               ),
-      
+        
             ),
+               Container(
+             padding: const EdgeInsets.all(8.0),
+         child:  Row(
+              children: [
+                      ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      currentIndexe=0;
+                    });
+                  },
+                   style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                        
+                       SizedBox(
+                        width: 5,
+                      ),
+                  
+                      Text('INFORMATION GENERALES', style: TextStyle(
+                   color:  currentIndexe==0 ? Colors.blue : Colors.grey
+                  ),),
+        
+                  
+                     
+                    ],
+                  ),
+                ),
+      
+                 ElevatedButton(
+                  onPressed: () {
+                     setState(() {
+                      currentIndexe=1;
+                    });
+                  },
+                   style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                        
+                       SizedBox(
+                        width: 5,
+                      ),
+                  
+                      Text('LISTE DE CONTROLE PREOPERATOIRE', style: TextStyle(
+                   color: currentIndexe==1 ? Colors.blue : Colors.grey
+                  ),),
+        
+                  
+                     
+                    ],
+                  ),
+                ),
+      
+                 ElevatedButton(
+                  onPressed: () {
+                     setState(() {
+                      currentIndexe=2;
+                    });
+                  },
+                   style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                        
+                       SizedBox(
+                        width: 5,
+                      ),
+                  
+                      Text('MEDICAMENT', style: TextStyle(
+                   color: currentIndexe==2 ? Colors.blue : Colors.grey
+                  ),),
+        
+                  
+                     
+                    ],
+                  ),
+                ),
+      
+                 ElevatedButton(
+                  onPressed: () {
+                     setState(() {
+                      currentIndexe=3;
+                    });
+                  },
+                   style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                        
+                       SizedBox(
+                        width: 5,
+                      ),
+                  
+                      Text('COMMANDES POST-OPERATOIRES', style: TextStyle(
+                   color:currentIndexe==3 ? Colors.blue : Colors.grey
+                  ),),
+        
+                  
+                     
+                    ],
+                  ),
+                ),
+                  ElevatedButton(
+                  onPressed: () {
+                     setState(() {
+                      currentIndexe=4;
+                    });
+                  },
+                   style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                        
+                       SizedBox(
+                        width: 5,
+                      ),
+                  
+                      Text('RESUME DE DECHARGE', style: TextStyle(
+                   color:currentIndexe==4 ? Colors.blue : Colors.grey
+                  ),),
+        
+                  
+                     
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+      
+            currentIndexe==0 ? Information() :
+      
+              currentIndexe==1 ? ListeCon() :
+              
+               currentIndexe==2? Medocs() :
+              
+              currentIndexe==3 ?  Commandes() :
+               currentIndexe==4 ?  Resumes() :
+      
+      
+              SizedBox(),
 
         ],),
       )
