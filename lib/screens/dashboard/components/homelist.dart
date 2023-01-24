@@ -1,5 +1,6 @@
 import 'package:admin/screens/dashboard/page.dart';
 import 'package:admin/screens/docteurs/doctorpage.dart';
+import 'package:admin/screens/docteurs/listdocteur.dart';
 import 'package:admin/screens/hospitalisation/hospitalisation.dart';
 import 'package:admin/screens/patients/patient_details.dart';
 import 'package:admin/widgets/Cards.dart';
@@ -34,7 +35,7 @@ class HomeList {
         )),
     HomeList(
         imagePath: 'assets/images/background-3.jpeg',
-        navigateScreen: HelpScreen(),
+        navigateScreen: Listdocteur(),
         title: MyCard4(
           num: 0,
         )),

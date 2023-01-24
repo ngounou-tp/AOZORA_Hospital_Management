@@ -1,4 +1,5 @@
 import 'package:admin/color_constants.dart';
+import 'package:admin/responsive.dart';
 import 'package:admin/screens/hospitalisation/hospit2.dart';
 import 'package:admin/utils/app_theme.dart';
 import 'package:colorize_text_avatar/colorize_text_avatar.dart';
@@ -6,7 +7,10 @@ import 'package:admin/screens/docteurs/widgetsdortorform.dart';
 import 'package:dropdown_textfield/dropdown_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'widgetdoctor.dart';
+import 'widgetsdortorform.dart';
+import 'listdocteur.dart';
+
+int indexbutton = 0;
 
 class Doctor extends StatefulWidget {
   @override
@@ -14,18 +18,26 @@ class Doctor extends StatefulWidget {
 }
 
 class _DoctorState extends State<Doctor> {
-  @override
-  void initState() {
-    super.initState();
-  }
+  int currentIndex = 0;
+  var valueChoose = 'selectionner';
+
+  List data = [
+    'selectionner',
+    'Clavier',
+    'Souris',
+    'Flutter',
+    'Fullstack',
+    'Main',
+    'Hello',
+  ];
+
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
     var brightness = MediaQuery.of(context).platformBrightness;
     bool isLightMode = brightness == Brightness.light;
 
-    bool isChecked = false;
-    int indexbutton = 0;
     return Container(
       //color: isLightMode ? AppTheme.nearlyWhite : AppTheme.nearlyBlack,
 
@@ -65,8 +77,8 @@ class _DoctorState extends State<Doctor> {
               ),
               Center(
                 child: Container(
-                  width: 1250,
-                  height: 400,
+                  width: MediaQuery.of(context).size.width,
+                  height: 450,
                   margin: const EdgeInsets.all(10.100),
                   padding: const EdgeInsets.all(2.0),
                   decoration:
@@ -75,190 +87,370 @@ class _DoctorState extends State<Doctor> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(children: [
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.traffic,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Traitements',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(110, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.point_of_sale,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Rendez-vous',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(110, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.note_add,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Ordonance',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(110, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.money,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Commissions',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(120, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.thermostat_auto,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Chirurgie',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(120, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.local_hospital,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Hospitalisation',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(150, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.query_builder,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Demandes',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(120, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.note_alt,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Resultats',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(120, 50)),
-                          ),
-                        ]),
-                        Container(
-                          child: Row(
-                            children: [
-                              Column(
-                                children: [
-                                  Text(
-                                    'Nom',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    width: 700,
-                                    height: 40,
-                                    child: TextFormField(
-                                      decoration: InputDecoration(
-                                        labelText: 'Nom du Docteur',
-                                        enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                                width: 1, color: Colors.grey)),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton.icon(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.add_a_photo,
-                                  color: Colors.grey,
-                                  size: 80,
-                                ),
-                                label: Text(
-                                  ' ',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
+                        Responsive.isDesktop(context)
+                            ? Row(children: [
+                                ElevatedButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.traffic,
                                     color: Colors.grey,
                                   ),
+                                  label: Text(
+                                    'Traitements',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                      minimumSize: Size(110, 50)),
                                 ),
-                                style: ElevatedButton.styleFrom(
-                                    primary: Colors.white,
-                                    minimumSize: Size(110, 90)),
-                              ),
-                            ],
-                          ),
-                        ),
+                                ElevatedButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.point_of_sale,
+                                    color: Colors.grey,
+                                  ),
+                                  label: Text(
+                                    'Rendez-vous',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                      minimumSize: Size(110, 50)),
+                                ),
+                                ElevatedButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.note_add,
+                                    color: Colors.grey,
+                                  ),
+                                  label: Text(
+                                    'Ordonance',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                      minimumSize: Size(110, 50)),
+                                ),
+                                ElevatedButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.money,
+                                    color: Colors.grey,
+                                  ),
+                                  label: Text(
+                                    'Commissions',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                      minimumSize: Size(120, 50)),
+                                ),
+                                ElevatedButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.thermostat_auto,
+                                    color: Colors.grey,
+                                  ),
+                                  label: Text(
+                                    'Chirurgie',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                      minimumSize: Size(120, 50)),
+                                ),
+                                ElevatedButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.local_hospital,
+                                    color: Colors.grey,
+                                  ),
+                                  label: Text(
+                                    'Hospitalisation',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                      minimumSize: Size(150, 50)),
+                                ),
+                                ElevatedButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.query_builder,
+                                    color: Colors.grey,
+                                  ),
+                                  label: Text(
+                                    'Demandes',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                      minimumSize: Size(120, 50)),
+                                ),
+                                SizedBox(
+                                  // width: MediaQuery.of(context.size.width),
+                                  child: ElevatedButton.icon(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.note_alt,
+                                      color: Colors.grey,
+                                    ),
+                                    label: Text(
+                                      'Resultats',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                    style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                Spacer(),
+                                ElevatedButton.icon(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.add_a_photo,
+                                    color: Colors.grey,
+                                    size: 80,
+                                  ),
+                                  label: Text(
+                                    ' ',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white,
+                                      minimumSize: Size(110, 90)),
+                                ),
+                              ])
+                            : Responsive.isTablet(context)
+                                ? Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.traffic,
+                                              color: Colors.grey,
+                                            ),
+                                            label: Text(
+                                              'Traitements',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(110, 50)),
+                                          ),
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.point_of_sale,
+                                              color: Colors.grey,
+                                            ),
+                                            label: Text(
+                                              'Rendez-vous',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(110, 50)),
+                                          ),
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.note_add,
+                                              color: Colors.grey,
+                                            ),
+                                            label: Text(
+                                              'Ordonance',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(110, 50)),
+                                          ),
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.money,
+                                              color: Colors.grey,
+                                            ),
+                                            label: Text(
+                                              'Commissions',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(120, 50)),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.thermostat_auto,
+                                              color: Colors.grey,
+                                            ),
+                                            label: Text(
+                                              'Chirurgie',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(120, 50)),
+                                          ),
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.local_hospital,
+                                              color: Colors.grey,
+                                            ),
+                                            label: Text(
+                                              'Hospitalisation',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(150, 50)),
+                                          ),
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.query_builder,
+                                              color: Colors.grey,
+                                            ),
+                                            label: Text(
+                                              'Demandes',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(120, 50)),
+                                          ),
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.note_alt,
+                                              color: Colors.grey,
+                                            ),
+                                            label: Text(
+                                              'Resultats',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(120, 50)),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Spacer(),
+                                          ElevatedButton.icon(
+                                            onPressed: () {},
+                                            icon: Icon(
+                                              Icons.add_a_photo,
+                                              color: Colors.grey,
+                                              size: 80,
+                                            ),
+                                            label: Text(
+                                              ' ',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Colors.white,
+                                                minimumSize: Size(110, 90)),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                : Container(
+                                    child: Row(
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Text(
+                                              'Nom',
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            SizedBox(
+                                              width: 700,
+                                              height: 40,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  labelText: 'Nom du Docteur',
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderSide:
+                                                              BorderSide(
+                                                                  width: 1,
+                                                                  color: Colors
+                                                                      .grey)),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                         Container(
                           alignment: Alignment.topLeft,
                           child: Row(
@@ -341,24 +533,88 @@ class _DoctorState extends State<Doctor> {
                                       child: Container(
                                         child: ListView(
                                           children: [
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
+                                            SizedBox(
+                                              width: MediaQuery.of(context)
+                                                  .size
+                                                  .width,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderSide: BorderSide(
+                                                              width: 1,
+                                                              color: Colors
+                                                                  .blueGrey)),
+                                                ),
                                               ),
                                             ),
-                                            DropDownTextField(
-                                              dropDownList: [],
-                                            ),
-                                            DropDownTextField(
-                                              dropDownList: [],
+                                            SizedBox(
+                                              child: DropdownButtonFormField(
+                                                decoration: InputDecoration(
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                    //<-- SEE HERE
+                                                    borderSide: BorderSide(
+                                                        color: Colors.grey,
+                                                        width: 1),
+                                                  ),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                    //<-- SEE HERE
+                                                    borderSide: BorderSide(
+                                                        color: Colors.grey,
+                                                        width: 1),
+                                                  ),
+                                                  filled: true,
+                                                ),
+                                                value: valueChoose,
+                                                onChanged: (newValue) {
+                                                  setState(() {
+                                                    valueChoose:
+                                                    newValue;
+                                                  });
+                                                },
+                                                items: data.map((valueItem) {
+                                                  return DropdownMenuItem(
+                                                    value: valueItem,
+                                                    child: Text(valueItem),
+                                                  );
+                                                }).toList(),
+                                              ),
                                             ),
                                             SizedBox(
-                                              height: 20,
+                                              child: DropdownButtonFormField(
+                                                decoration: InputDecoration(
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                    //<-- SEE HERE
+                                                    borderSide: BorderSide(
+                                                        color: Colors.grey,
+                                                        width: 1),
+                                                  ),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                    //<-- SEE HERE
+                                                    borderSide: BorderSide(
+                                                        color: Colors.grey,
+                                                        width: 1),
+                                                  ),
+                                                  filled: true,
+                                                ),
+                                                value: valueChoose,
+                                                onChanged: (newValue) {
+                                                  setState(() {
+                                                    valueChoose:
+                                                    newValue;
+                                                  });
+                                                },
+                                                items: data.map((valueItem) {
+                                                  return DropdownMenuItem(
+                                                    value: valueItem,
+                                                    child: Text(valueItem),
+                                                  );
+                                                }).toList(),
+                                              ),
                                             ),
                                             TextFormField(
                                               decoration: InputDecoration(
@@ -385,11 +641,73 @@ class _DoctorState extends State<Doctor> {
                                                 });
                                               },
                                             ),
-                                            DropDownTextField(
-                                              dropDownList: [],
+                                            SizedBox(
+                                              child: DropdownButtonFormField(
+                                                decoration: InputDecoration(
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                    //<-- SEE HERE
+                                                    borderSide: BorderSide(
+                                                        color: Colors.grey,
+                                                        width: 1),
+                                                  ),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                    //<-- SEE HERE
+                                                    borderSide: BorderSide(
+                                                        color: Colors.grey,
+                                                        width: 1),
+                                                  ),
+                                                  filled: true,
+                                                ),
+                                                value: valueChoose,
+                                                onChanged: (newValue) {
+                                                  setState(() {
+                                                    valueChoose:
+                                                    newValue;
+                                                  });
+                                                },
+                                                items: data.map((valueItem) {
+                                                  return DropdownMenuItem(
+                                                    value: valueItem,
+                                                    child: Text(valueItem),
+                                                  );
+                                                }).toList(),
+                                              ),
                                             ),
-                                            DropDownTextField(
-                                              dropDownList: [],
+                                            SizedBox(
+                                              child: DropdownButtonFormField(
+                                                decoration: InputDecoration(
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                    //<-- SEE HERE
+                                                    borderSide: BorderSide(
+                                                        color: Colors.grey,
+                                                        width: 1),
+                                                  ),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                    //<-- SEE HERE
+                                                    borderSide: BorderSide(
+                                                        color: Colors.grey,
+                                                        width: 1),
+                                                  ),
+                                                  filled: true,
+                                                ),
+                                                value: valueChoose,
+                                                onChanged: (newValue) {
+                                                  setState(() {
+                                                    valueChoose:
+                                                    newValue;
+                                                  });
+                                                },
+                                                items: data.map((valueItem) {
+                                                  return DropdownMenuItem(
+                                                    value: valueItem,
+                                                    child: Text(valueItem),
+                                                  );
+                                                }).toList(),
+                                              ),
                                             ),
                                           ],
                                         ),
@@ -406,11 +724,9 @@ class _DoctorState extends State<Doctor> {
                             ),
                             ElevatedButton.icon(
                               onPressed: () {
-                                // Navigator.of(context).push(
-                                //  MaterialPageRoute(
-                                //    builder: (context) => Doctorform(),
-                                // ),
-                                // );
+                                setState(() {
+                                  indexbutton = 1;
+                                });
                               },
                               icon: Icon(
                                 Icons.traffic,
@@ -428,37 +744,12 @@ class _DoctorState extends State<Doctor> {
                                   primary: Colors.white,
                                   minimumSize: Size(120, 50)),
                             ),
-                            ElevatedButton(
+                            ElevatedButton.icon(
                               onPressed: () {
                                 setState(() {
                                   indexbutton = 2;
                                 });
                               },
-                              style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.white),
-                                  padding: MaterialStateProperty.all(
-                                      EdgeInsets.all(20)),
-                                  textStyle: MaterialStateProperty.all(
-                                      TextStyle(fontSize: 15))),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    'CHECKLIST',
-                                    style: TextStyle(
-                                        color: indexbutton == 2
-                                            ? Colors.blue
-                                            : Colors.grey),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            ElevatedButton.icon(
-                              onPressed: () {},
                               icon: Icon(
                                 Icons.traffic,
                                 color: Colors.grey,
@@ -467,7 +758,7 @@ class _DoctorState extends State<Doctor> {
                                 'INFOS PERSONELLES',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    color: indexbutton == 7
+                                    color: indexbutton == 2
                                         ? Colors.blue
                                         : Colors.grey),
                               ),
@@ -476,7 +767,11 @@ class _DoctorState extends State<Doctor> {
                                   minimumSize: Size(120, 50)),
                             ),
                             ElevatedButton.icon(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  indexbutton = 3;
+                                });
+                              },
                               icon: Icon(
                                 Icons.traffic,
                                 color: Colors.grey,
@@ -485,7 +780,7 @@ class _DoctorState extends State<Doctor> {
                                 'COMMISSIONS D' '"AFFAIRES',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    color: indexbutton == 1
+                                    color: indexbutton == 3
                                         ? Colors.blue
                                         : Colors.grey),
                               ),
@@ -495,173 +790,31 @@ class _DoctorState extends State<Doctor> {
                             )
                           ],
                         ),
-                        Container(
-                          width: MediaQuery.of(context).size.width - 10,
-                          child: Column(children: [
-                            //indexbutton == 0
-                            // ? InformationGeneral() :
-
-                            // indexbutton==1 ? CheckList() :
-
-                            indexbutton == 2
-                                ? EvaluationClinic()
-                                :
-
-                                // indexbutton==3 ?  DetailJuridique() :
-
-                                SizedBox()
-                          ]),
-                        ),
-                        Container(
-                          //  width: 500,
-                          //  height: 600,
-                          child: Row(
-                            children: [
-                              Column(
-                                children: [
-                                  SizedBox(
-                                    child: Container(
-                                      margin: const EdgeInsets.all(5.0),
-                                      padding: const EdgeInsets.all(0.100),
-                                      width: 200,
-                                      height: 450,
-                                      child: ListView(
-                                        children: [
-                                          Text('Adresse'),
-                                          SizedBox(
-                                            height: 40,
+                        indexbutton == 1
+                            ? widgetsdoctorform()
+                            : indexbutton == 2
+                                ? SizedBox(
+                                    child: Column(children: [
+                                      Text('signature'),
+                                      SizedBox(
+                                        width: 500,
+                                        height: 500,
+                                        child: TextFormField(
+                                          decoration: InputDecoration(
+                                            enabledBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    width: 1,
+                                                    color: Colors.blueGrey)),
                                           ),
-                                          Text('Lien vers un site web'),
-                                          SizedBox(
-                                            height: 20,
-                                          ),
-                                          Text(
-                                              'Reservation en ligne autorisee'),
-                                          SizedBox(
-                                            height: 40,
-                                          ),
-                                          Text(
-                                              'Reservation de visite a domicile autorisee'),
-                                          SizedBox(
-                                            height: 30,
-                                          ),
-                                          Text('Montrer les frais'),
-                                          SizedBox(
-                                            height: 20,
-                                          ),
-                                          Text('Informations de base'),
-                                          SizedBox(
-                                            height: 30,
-                                          ),
-                                          Text('Telephone'),
-                                          Text('Mobile'),
-                                          Text('Couriel'),
-                                          Text('TVA/Numero fiscal'),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  SizedBox(
-                                      width: 300,
-                                      height: 450,
-                                      child: Container(
-                                        child: ListView(
+                                        ),
+                                      )
+                                    ]),
+                                  )
+                                : indexbutton == 3
+                                    ? SizedBox(
+                                        child: Row(
                                           children: [
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 15,
-                                            ),
+                                            Text('donner la commission'),
                                             Checkbox(
                                               value: isChecked,
                                               activeColor: Colors.blueAccent,
@@ -670,98 +823,11 @@ class _DoctorState extends State<Doctor> {
                                                   isChecked = value!;
                                                 });
                                               },
-                                            ),
-                                            Checkbox(
-                                              value: isChecked,
-                                              activeColor: Colors.blueAccent,
-                                              onChanged: (value) {
-                                                setState(() {
-                                                  isChecked = value!;
-                                                });
-                                              },
-                                            ),
-                                            Checkbox(
-                                              value: isChecked,
-                                              activeColor: Colors.blueAccent,
-                                              onChanged: (value) {
-                                                setState(() {
-                                                  isChecked = value!;
-                                                });
-                                              },
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
-                                            ),
-                                            TextFormField(
-                                              decoration: InputDecoration(
-                                                filled: true,
-                                                fillColor: Color.fromARGB(
-                                                    255, 199, 187, 187),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                            width: 1,
-                                                            color: Colors
-                                                                .blueGrey)),
-                                              ),
                                             ),
                                           ],
                                         ),
-                                      )),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
+                                      )
+                                    : SizedBox()
                       ],
                     ),
                   ),
