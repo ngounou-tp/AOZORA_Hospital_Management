@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\bob\Desktop\flutter\Hospital Management\windows\flutter\ephemeral\.plugin_symlinks\flutter_secure_storage_windows\windows\flutter_secure_storage_windows_plugin.cpp">
+    <ClCompile Include="G:\aozora\AOZORA_Hospital_Management\windows\flutter\ephemeral\.plugin_symlinks\flutter_secure_storage_windows\windows\flutter_secure_storage_windows_plugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\bob\Desktop\flutter\Hospital Management\windows\flutter\ephemeral\.plugin_symlinks\flutter_secure_storage_windows\windows\CMakeLists.txt" />
+    <CustomBuild Include="G:\aozora\AOZORA_Hospital_Management\windows\flutter\ephemeral\.plugin_symlinks\flutter_secure_storage_windows\windows\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{B255C168-E526-39C4-96F4-4636FCD1855A}</UniqueIdentifier>
+      <UniqueIdentifier>{D574D34E-7CD7-3685-8F33-E27D5E8375FD}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

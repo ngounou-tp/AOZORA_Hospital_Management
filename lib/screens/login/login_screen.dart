@@ -696,7 +696,6 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                       Icons.close,
                                       size: 14,
                                     ),
-                                    style: ElevatedButton.styleFrom(),
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },

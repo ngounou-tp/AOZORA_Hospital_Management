@@ -1,8 +1,9 @@
-import 'package:admin/color_constants.dart';
+
 import 'package:admin/screens/hospitalisation/element.dart';
 
 import 'package:flutter/material.dart';
 
+import 'creerchuri.dart';
 import 'hospi.dart';
 import 'hospit1.dart';
 import 'hospit2.dart';
@@ -234,7 +235,12 @@ Element5(),
               child: Row(children: [
                 Spacer(),
                ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                      Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => CreeChuri()),
+                            );
+                  },
                    style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
                       padding: MaterialStateProperty.all(EdgeInsets.all(20)),
@@ -597,6 +603,7 @@ Element5(),
           ),
           Container(
             width:MediaQuery.of(context).size.width-10,
+            
             child: Column(children: [
                
               currentIndex==0 ? InformationGeneral() :
