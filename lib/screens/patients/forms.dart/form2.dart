@@ -1,4 +1,5 @@
 import 'package:admin/color_constants.dart';
+import 'package:admin/responsive.dart';
 import 'package:admin/utils/custom_ultility.dart';
 import 'package:admin/widgets/customformfields.dart';
 import 'package:flutter/material.dart';
@@ -19,90 +20,90 @@ class _FormCreation2State extends State<FormCreation2> {
     // ignore: unused_local_variable
     return Container(
       color: backgroundColor,
+      padding: EdgeInsets.only(top: 20),
       width: width,
-      child:
-          Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-        CustomText(text: "Informations Generale", size: 30),
-        Padding(
-          padding: const EdgeInsets.all(12),
-          child: Form(
-            key: _formKey2,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Fields2(),
-            ),
-          ),
-        )
-      ]),
+      child: Form(
+        key: _formKey2,
+        child:
+            Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          if (Responsive.isMobile(context))
+            CustomText(text: "Informations Generale", size: 15),
+          GridView.count(
+              crossAxisCount: Responsive.isDesktop(context)
+                  ? 2
+                  : Responsive.isTablet(context)
+                      ? 2
+                      : 1,
+              mainAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
+              crossAxisSpacing: Responsive.isDesktop(context) ? 50 : 10,
+              childAspectRatio: Responsive.isDesktop(context)
+                  ? 11
+                  : Responsive.isTablet(context)
+                      ? 11
+                      : 12,
+              shrinkWrap: true,
+              children: List.generate(mylist.length, (index) {
+                return Center(
+                  child: mylist[index],
+                );
+              })),
+        ]),
+      ),
     );
   }
 }
 
-class Fields2 extends StatefulWidget {
-  const Fields2({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<Fields2> createState() => _Fields2State();
-}
-
-class _Fields2State extends State<Fields2> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(children: [
-      CustomField(
-        name: "Addresse",
-      ),
-      CustomDropDownField(
-          defaultvalue: "cameroun",
-          dropdownitem: ["cameroun", "france", "nigeria"],
-          fieldname: "Pays"),
-      CustomDropDownField(
-          defaultvalue: "douala",
-          dropdownitem: ["douala", "yaounde", "baffousam"],
-          fieldname: "Ville"),
-      CustomField(
-        name: "Telephone",
-      ),
-      CustomField(
-        name: "Mobile",
-      ),
-      CustomField(
-        name: "Mobile",
-      ),
-      CustomDropDownField(
-          defaultvalue: "cameroun",
-          dropdownitem: ["cameroun", "france", "nigeria"],
-          fieldname: "Nationalite"),
-      CustomField(
-        name: "Passeport number",
-      ),
-      CustomField(
-        name: "Courriel",
-      ),
-      CustomField(
-        name: "Identite gouvern",
-      ),
-      CustomField(
-        name: "Occupation",
-      ),
-      CustomField(
-        name: "Education",
-      ),
-      CustomField(
-        name: "Religion",
-      ),
-      CustomField(
-        name: "Etats civle",
-      ),
-      CustomField(
-        name: "Tribu",
-      ),
-      CustomDropDownField(
-          defaultvalue: "fulbe",
-          dropdownitem: ["bamileke", "fulbe", "etc"],
-          fieldname: "Groupe ethnique"),
-    ]);
-  }
-}
+List mylist = [
+  CustomField(
+    name: "Addresse",
+  ),
+  CustomDropDownField(
+      defaultvalue: "cameroun",
+      dropdownitem: ["cameroun", "france", "nigeria"],
+      fieldname: "Pays"),
+  CustomDropDownField(
+      defaultvalue: "douala",
+      dropdownitem: ["douala", "yaounde", "baffousam"],
+      fieldname: "Ville"),
+  CustomField(
+    name: "Telephone",
+  ),
+  CustomField(
+    name: "Mobile",
+  ),
+  CustomField(
+    name: "Mobile",
+  ),
+  CustomDropDownField(
+      defaultvalue: "cameroun",
+      dropdownitem: ["cameroun", "france", "nigeria"],
+      fieldname: "Nationalite"),
+  CustomField(
+    name: "Passeport number",
+  ),
+  CustomField(
+    name: "Courriel",
+  ),
+  CustomField(
+    name: "Identite gouvern",
+  ),
+  CustomField(
+    name: "Occupation",
+  ),
+  CustomField(
+    name: "Education",
+  ),
+  CustomField(
+    name: "Religion",
+  ),
+  CustomField(
+    name: "Etats civle",
+  ),
+  CustomField(
+    name: "Tribu",
+  ),
+  CustomDropDownField(
+      defaultvalue: "fulbe",
+      dropdownitem: ["bamileke", "fulbe", "etc"],
+      fieldname: "Groupe ethnique"),
+];

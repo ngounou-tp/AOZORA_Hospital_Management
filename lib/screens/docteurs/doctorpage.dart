@@ -1,12 +1,18 @@
 import 'package:admin/color_constants.dart';
+<<<<<<< HEAD
 import 'package:admin/screens/hospitalisation/hospit2.dart';
+=======
+>>>>>>> ngounou
 import 'package:admin/utils/app_theme.dart';
 import 'package:colorize_text_avatar/colorize_text_avatar.dart';
 import 'package:admin/screens/docteurs/widgetsdortorform.dart';
 import 'package:dropdown_textfield/dropdown_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+<<<<<<< HEAD
 import 'widgetdoctor.dart';
+=======
+>>>>>>> ngounou
 
 class Doctor extends StatefulWidget {
   @override
@@ -25,7 +31,10 @@ class _DoctorState extends State<Doctor> {
     bool isLightMode = brightness == Brightness.light;
 
     bool isChecked = false;
+<<<<<<< HEAD
     int indexbutton = 0;
+=======
+>>>>>>> ngounou
     return Container(
       //color: isLightMode ? AppTheme.nearlyWhite : AppTheme.nearlyBlack,
 
@@ -65,7 +74,11 @@ class _DoctorState extends State<Doctor> {
               ),
               Center(
                 child: Container(
+<<<<<<< HEAD
                   width: 1250,
+=======
+                  width: 1200,
+>>>>>>> ngounou
                   height: 400,
                   margin: const EdgeInsets.all(10.100),
                   padding: const EdgeInsets.all(2.0),
@@ -405,6 +418,7 @@ class _DoctorState extends State<Doctor> {
                               width: 140,
                             ),
                             ElevatedButton.icon(
+<<<<<<< HEAD
                               onPressed: () {
                                 // Navigator.of(context).push(
                                 //  MaterialPageRoute(
@@ -412,6 +426,9 @@ class _DoctorState extends State<Doctor> {
                                 // ),
                                 // );
                               },
+=======
+                              onPressed: () {},
+>>>>>>> ngounou
                               icon: Icon(
                                 Icons.traffic,
                                 color: Colors.grey,
@@ -419,15 +436,22 @@ class _DoctorState extends State<Doctor> {
                               label: Text(
                                 'INFORMATIONS GENERALES',
                                 style: TextStyle(
+<<<<<<< HEAD
                                     fontWeight: FontWeight.w500,
                                     color: indexbutton == 1
                                         ? Colors.blue
                                         : Colors.grey),
+=======
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey,
+                                ),
+>>>>>>> ngounou
                               ),
                               style: ElevatedButton.styleFrom(
                                   primary: Colors.white,
                                   minimumSize: Size(120, 50)),
                             ),
+<<<<<<< HEAD
                             ElevatedButton(
                               onPressed: () {
                                 setState(() {
@@ -457,6 +481,8 @@ class _DoctorState extends State<Doctor> {
                                 ],
                               ),
                             ),
+=======
+>>>>>>> ngounou
                             ElevatedButton.icon(
                               onPressed: () {},
                               icon: Icon(
@@ -466,10 +492,16 @@ class _DoctorState extends State<Doctor> {
                               label: Text(
                                 'INFOS PERSONELLES',
                                 style: TextStyle(
+<<<<<<< HEAD
                                     fontWeight: FontWeight.w500,
                                     color: indexbutton == 7
                                         ? Colors.blue
                                         : Colors.grey),
+=======
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey,
+                                ),
+>>>>>>> ngounou
                               ),
                               style: ElevatedButton.styleFrom(
                                   primary: Colors.white,
@@ -484,16 +516,23 @@ class _DoctorState extends State<Doctor> {
                               label: Text(
                                 'COMMISSIONS D' '"AFFAIRES',
                                 style: TextStyle(
+<<<<<<< HEAD
                                     fontWeight: FontWeight.w500,
                                     color: indexbutton == 1
                                         ? Colors.blue
                                         : Colors.grey),
+=======
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey,
+                                ),
+>>>>>>> ngounou
                               ),
                               style: ElevatedButton.styleFrom(
                                   primary: Colors.white,
                                   minimumSize: Size(120, 50)),
                             )
                           ],
+<<<<<<< HEAD
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width - 10,
@@ -762,6 +801,9 @@ class _DoctorState extends State<Doctor> {
                             ],
                           ),
                         ),
+=======
+                        )
+>>>>>>> ngounou
                       ],
                     ),
                   ),
@@ -770,14 +812,29 @@ class _DoctorState extends State<Doctor> {
               Row(
                 children: [
                   SizedBox(
+<<<<<<< HEAD
                     width: 120,
+=======
+                    width: 100,
+>>>>>>> ngounou
                   ),
                   TextButton(
                       onPressed: () {}, child: Text('Envoyer un message')),
                   TextButton(
                       onPressed: () {}, child: Text('Enregistrer une note')),
                   TextButton(
+<<<<<<< HEAD
                       onPressed: () {}, child: Text('Planifer une activite')),
+=======
+                    child: Icon(Icons.add_alarm),
+                    onPressed: () {},
+                  ),
+                  SizedBox(
+                    width: 1,
+                  ),
+                  TextButton(
+                      onPressed: () {}, child: Text('Enregistrer une note')),
+>>>>>>> ngounou
                   Spacer(),
                   TextButton(onPressed: () {}, child: Text('0')),
                   TextButton(onPressed: () {}, child: Text('Suivre')),

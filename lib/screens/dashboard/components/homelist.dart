@@ -1,6 +1,13 @@
 import 'package:admin/screens/dashboard/page.dart';
+<<<<<<< HEAD
 import 'package:admin/screens/docteurs/doctorpage.dart';
+=======
+
+import 'package:admin/screens/docteurs/doctorpage.dart';
+
+>>>>>>> ngounou
 import 'package:admin/screens/hospitalisation/hospitalisation.dart';
+
 import 'package:admin/screens/patients/patient_details.dart';
 import 'package:admin/widgets/Cards.dart';
 import 'package:flutter/material.dart';

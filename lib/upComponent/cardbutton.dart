@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 
 class CardButton extends StatelessWidget {
   final IconData icone;
-  const CardButton({Key? key, required this.icone}) : super(key: key);
+
+  CardButton({
+    Key? key,
+    required this.icone,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

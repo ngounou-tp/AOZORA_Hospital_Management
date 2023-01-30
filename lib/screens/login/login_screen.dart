@@ -1,7 +1,10 @@
+// ignore_for_file: dead_code
+
 import 'dart:convert';
 
 import 'package:admin/color_constants.dart';
 import 'package:flutter/material.dart';
+
 import 'package:motion_toast/motion_toast.dart';
 import 'package:page_transition/page_transition.dart';
 //import 'package:page_transition/page_transition.dart';
@@ -567,6 +570,10 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                     Icons.close,
                                     size: 14,
                                   ),
+<<<<<<< HEAD
+=======
+                                  style: ElevatedButton.styleFrom(),
+>>>>>>> ngounou
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -582,6 +589,10 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                           size: 14,
                                         )
                                       : SizedBox(),
+<<<<<<< HEAD
+=======
+                                  style: ElevatedButton.styleFrom(),
+>>>>>>> ngounou
                                   onPressed: () {
                                     setState(() {
                                       if (codeController.text.isNotEmpty) {
@@ -708,6 +719,10 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                             size: 14,
                                           )
                                         : SizedBox(),
+<<<<<<< HEAD
+=======
+                                    style: ElevatedButton.styleFrom(),
+>>>>>>> ngounou
                                     onPressed: () {
                                       setState(() {
                                         if (codeController.text.isNotEmpty) {

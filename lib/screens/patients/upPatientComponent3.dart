@@ -32,20 +32,20 @@ class UpSection3 extends StatelessWidget {
                     child: CustomText(
                       text: "Mon Tableau de Bord/Patient",
                       size: Responsive.isDesktop(context)
-                          ? 22
+                          ? 20
                           : Responsive.isTablet(context)
-                              ? 18
-                              : 10,
+                              ? 16
+                              : 11,
                       color: Colors.blue,
                     ),
                   ),
                   CustomText(
                     text: "/Creer",
                     size: Responsive.isDesktop(context)
-                        ? 22
+                        ? 20
                         : Responsive.isTablet(context)
-                            ? 18
-                            : 10,
+                            ? 16
+                            : 11,
                     color: Colors.grey,
                   )
                 ],
@@ -68,10 +68,10 @@ class UpSection3 extends StatelessWidget {
                           child: CustomText(
                               text: "SAUVEGARDER",
                               size: Responsive.isDesktop(context)
-                                  ? 22
+                                  ? 16
                                   : Responsive.isTablet(context)
-                                      ? 18
-                                      : 9,
+                                      ? 14
+                                      : 11,
                               color: Colors.white),
                         )),
                   ),
@@ -90,10 +90,10 @@ class UpSection3 extends StatelessWidget {
                           child: CustomText(
                               text: "ANNULER",
                               size: Responsive.isDesktop(context)
-                                  ? 22
+                                  ? 16
                                   : Responsive.isTablet(context)
-                                      ? 18
-                                      : 9,
+                                      ? 14
+                                      : 11,
                               color: Colors.white),
                         )),
                   ),
