@@ -570,10 +570,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                     Icons.close,
                                     size: 14,
                                   ),
-<<<<<<< HEAD
-=======
                                   style: ElevatedButton.styleFrom(),
->>>>>>> ngounou
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -589,10 +586,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                           size: 14,
                                         )
                                       : SizedBox(),
-<<<<<<< HEAD
-=======
                                   style: ElevatedButton.styleFrom(),
->>>>>>> ngounou
                                   onPressed: () {
                                     setState(() {
                                       if (codeController.text.isNotEmpty) {
@@ -719,10 +713,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                                             size: 14,
                                           )
                                         : SizedBox(),
-<<<<<<< HEAD
-=======
                                     style: ElevatedButton.styleFrom(),
->>>>>>> ngounou
                                     onPressed: () {
                                       setState(() {
                                         if (codeController.text.isNotEmpty) {
