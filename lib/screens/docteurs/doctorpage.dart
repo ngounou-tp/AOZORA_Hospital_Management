@@ -8,16 +8,15 @@ import 'package:dropdown_textfield/dropdown_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'widgetsdortorform.dart';
-import 'listdocteur.dart';
 
 int indexbutton = 0;
 
-class Doctor extends StatefulWidget {
+class CreateDoctor extends StatefulWidget {
   @override
-  _DoctorState createState() => _DoctorState();
+  _CreateDoctorState createState() => _CreateDoctorState();
 }
 
-class _DoctorState extends State<Doctor> {
+class _CreateDoctorState extends State<CreateDoctor> {
   int currentIndex = 0;
   var valueChoose = 'selectionner';
 
@@ -37,6 +36,8 @@ class _DoctorState extends State<Doctor> {
   Widget build(BuildContext context) {
     var brightness = MediaQuery.of(context).platformBrightness;
     bool isLightMode = brightness == Brightness.light;
+    double width = MediaQuery.of(context).size.width;
+    double heigth = MediaQuery.of(context).size.height;
 
     return Container(
       //color: isLightMode ? AppTheme.nearlyWhite : AppTheme.nearlyBlack,
@@ -45,10 +46,6 @@ class _DoctorState extends State<Doctor> {
       child: SafeArea(
         top: false,
         child: Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            title: const Text('Docteur'),
-          ),
           backgroundColor:
               isLightMode ? AppTheme.nearlyWhite : AppTheme.nearlyBlack,
           body: Column(
@@ -77,8 +74,8 @@ class _DoctorState extends State<Doctor> {
               ),
               Center(
                 child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 450,
+                  width: width,
+                  height: 400,
                   margin: const EdgeInsets.all(10.100),
                   padding: const EdgeInsets.all(2.0),
                   decoration:
