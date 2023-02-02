@@ -1,5 +1,6 @@
 import 'package:admin/responsive.dart';
-import 'package:admin/screens/traitements/creation-form.dart';
+
+import 'package:admin/screens/traitements/traitement/form-copmponent/creation-form.dart';
 import 'package:admin/screens/traitements/traitement/traitement-appbar.dart';
 import 'package:admin/screens/traitements/traitement/traitement-listing.dart';
 

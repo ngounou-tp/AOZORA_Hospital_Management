@@ -1,8 +1,12 @@
 import 'package:admin/responsive.dart';
 import 'package:admin/screens/patients/forms.dart/form1.dart';
 import 'package:admin/screens/sante-infirmier/visite-salle.dart/forms/form-creation.dart';
+import 'package:admin/screens/traitements/traitement/form-copmponent/autres-infos.dart';
+import 'package:admin/screens/traitements/traitement/form-copmponent/detail_generaux.dart';
+
 import 'package:admin/screens/traitements/traitement/form-copmponent/form-header.dart';
 import 'package:admin/screens/traitements/traitement/form-copmponent/inscription-form.dart';
+import 'package:admin/screens/traitements/traitement/form-copmponent/proccedure-du-patient.dart';
 import 'package:admin/screens/traitements/traitement/form-copmponent/upform.dart';
 import 'package:admin/screens/traitements/traitement/traitement-appbar.dart';
 
@@ -64,19 +68,23 @@ class _TraitementFormState extends State<TraitementForm> {
           defaultvalue: "default",
           dropdownitem: ["default"],
           fieldname: "Service d'inscription"),
-      TextButton(
-          onPressed: () {
-            showDialog(
-                context: context,
-                builder: (_) {
-                  return InscriptionForm(
-                      heigth: heigth,
-                      width: width,
-                      formKey721: _formKeyinscription);
-                });
-          },
-          child: CustomText(
-              text: "Create inscription servie", color: Colors.grey, size: 9))
+      IconButton(
+        icon: Icon(
+          Icons.directions,
+          color: Colors.grey,
+          size: 20,
+        ),
+        onPressed: () {
+          showDialog(
+              context: context,
+              builder: (_) {
+                return InscriptionForm(
+                    heigth: heigth,
+                    width: width,
+                    formKey721: _formKeyinscription);
+              });
+        },
+      )
     ];
 
     return Scaffold(
@@ -216,7 +224,11 @@ class _TraitementFormState extends State<TraitementForm> {
                             position = 1;
                           });
                         },
-                        child: CustomText(text: "DETAILS GENERAUX", size: 15)),
+                        child: CustomText(
+                          text: "DETAILS GENERAUX",
+                          size: 15,
+                          color: position == 1 ? Colors.grey : Colors.black,
+                        )),
                     OutlinedButton(
                         onPressed: () {
                           setState(() {
@@ -225,7 +237,10 @@ class _TraitementFormState extends State<TraitementForm> {
                           });
                         },
                         child: CustomText(
-                            text: "PROCCEDURES DU PATIENTS", size: 15)),
+                          text: "PROCCEDURES DU PATIENTS",
+                          size: 15,
+                          color: position == 2 ? Colors.grey : Colors.black,
+                        )),
                     OutlinedButton(
                         onPressed: () {
                           setState(() {
@@ -233,15 +248,18 @@ class _TraitementFormState extends State<TraitementForm> {
                             position = 3;
                           });
                         },
-                        child:
-                            CustomText(text: "AUTRES INFORMATIONS", size: 15))
+                        child: CustomText(
+                          text: "AUTRES INFORMATIONS",
+                          size: 15,
+                          color: position == 3 ? Colors.grey : Colors.black,
+                        ))
                   ]),
                 ),
                 position == 1
-                    ? Container()
+                    ? DetailGeneraux()
                     : position == 2
-                        ? Container()
-                        : Container()
+                        ? ProccedureDuPatient()
+                        : AutresInfos()
               ],
             ),
           ))

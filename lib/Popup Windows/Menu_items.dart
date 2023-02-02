@@ -1,5 +1,6 @@
 import 'package:admin/appbar_component/appbar_page2.dart';
 import 'package:admin/responsive.dart';
+import 'package:admin/screens/Contacts/contact.dart';
 import 'package:admin/screens/main/main_screen.dart';
 import 'package:admin/screens/patients/patien_list_header.dart';
 import 'package:admin/screens/sante-infirmier/sante-layout.dart';
@@ -87,7 +88,7 @@ class _MenuItemsState extends State<MenuItems> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MainScreen()),
+            MaterialPageRoute(builder: (context) => Contacts()),
           );
         },
       ),

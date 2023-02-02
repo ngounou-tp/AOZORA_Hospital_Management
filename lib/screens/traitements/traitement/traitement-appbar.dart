@@ -2,8 +2,8 @@ import 'package:admin/Popup%20Windows/Menu_items.dart';
 import 'package:admin/appbar_component/videoClass.dart';
 import 'package:admin/responsive.dart';
 import 'package:admin/screens/login/login_screen.dart';
-import 'package:admin/screens/sante-infirmier/proccedure-patient.dart';
-import 'package:admin/screens/sante-infirmier/visite-salle.dart/visite-salle.dart';
+import 'package:admin/screens/traitements/configuration/configuration.dart';
+import 'package:admin/screens/traitements/traitement/proccedures/proccedure-tratement.dart';
 import 'package:admin/screens/traitements/traitement/traitement.dart';
 
 import 'package:admin/utils/custom_ultility.dart';
@@ -67,7 +67,7 @@ AppBar traitementAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ProccedurePatient()),
+                              builder: (context) => ProccedureTraitement()),
                         );
                       },
                       child: CustomText(
@@ -79,21 +79,34 @@ AppBar traitementAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                                   : 12,
                           color: Colors.white),
                     ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ProccedurePatient()),
-                        );
+                    PopupMenuButton(
+                      offset: Offset(45, 45),
+                      itemBuilder: (BuildContext context) {
+                        return [
+                          PopupMenuItem(
+                            child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Configuration()),
+                                  );
+                                },
+                                child: CustomText(
+                                  text: "Proccedures Group",
+                                  size: 15,
+                                  color: Colors.grey,
+                                )),
+                          )
+                        ];
                       },
                       child: CustomText(
                           text: "Configuration",
                           size: Responsive.isDesktop(context)
-                              ? 16
+                              ? 15
                               : Responsive.isTablet(context)
-                                  ? 12
-                                  : 12,
+                                  ? 14
+                                  : 8,
                           color: Colors.white),
                     ),
                   ],
@@ -138,7 +151,7 @@ AppBar traitementAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Traitements()),
+                                  builder: (context) => ProccedureTraitement()),
                             );
                           },
                           child: CustomText(
@@ -150,13 +163,27 @@ AppBar traitementAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                                       : 8,
                               color: Colors.white),
                         ),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => VisiteSalle()),
-                            );
+                        PopupMenuButton(
+                          offset: Offset(0, 45),
+                          itemBuilder: (BuildContext context) {
+                            return [
+                              PopupMenuItem(
+                                child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                Configuration()),
+                                      );
+                                    },
+                                    child: CustomText(
+                                      text: "Proccedures Group",
+                                      size: 15,
+                                      color: Colors.grey,
+                                    )),
+                              )
+                            ];
                           },
                           child: CustomText(
                               text: "Configuration",
