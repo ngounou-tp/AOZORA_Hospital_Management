@@ -1,5 +1,9 @@
 import 'package:admin/color_constants.dart';
 import 'package:admin/responsive.dart';
+import 'package:admin/screens/docteurs/widgetdocreferent1.dart';
+import 'package:admin/screens/docteurs/widgetdocreferent2.dart';
+import 'package:admin/screens/docteurs/widgetdocreferent3.dart';
+import 'package:admin/screens/docteurs/widgetdocreferent4.dart';
 import 'package:admin/screens/hospitalisation/hospit2.dart';
 import 'package:admin/utils/app_theme.dart';
 import 'package:colorize_text_avatar/colorize_text_avatar.dart';
@@ -109,7 +113,7 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
               Center(
                 child: Container(
                   width: width,
-                  height: 480,
+                  height: 530,
                   decoration:
                       BoxDecoration(border: Border.all(color: Colors.grey)),
                   child: SingleChildScrollView(
@@ -117,145 +121,67 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(children: [
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.traffic,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Rendez-vous',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(110, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.point_of_sale,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Facture',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(110, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.note_add,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'commandes',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(110, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.money,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Requisitions',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(120, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.thermostat_auto,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'Delivrance d',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(120, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.local_hospital,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'SMS',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(150, 50)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.query_builder,
-                              color: Colors.grey,
-                            ),
-                            label: Text(
-                              'annonces par sms',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                minimumSize: Size(120, 50)),
-                          ),
                           SizedBox(
-                            // width: MediaQuery.of(context.size.width),
-                            child: ElevatedButton.icon(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.note_alt,
-                                color: Colors.grey,
-                              ),
-                              label: Text(
-                                'PLUS',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                              ),
-                            ),
+                            width: 20,
                           ),
+                          Costumbutton(
+                              buttonstat: Buttonstat(
+                                  icone: Icons.traffic,
+                                  texte1: '0',
+                                  texte2: 'Rendez-vous')),
+                          // ElevatedButton.icon(
+                          //   onPressed: () {},
+                          //   icon: Icon(
+                          //     Icons.traffic,
+                          //     color: Colors.grey,
+                          //   ),
+                          //   label: Text(
+                          //     'Rendez-vous',
+                          //     style: TextStyle(
+                          //       fontWeight: FontWeight.w500,
+                          //       color: Colors.grey,
+                          //     ),
+                          //   ),
+                          //   style: ElevatedButton.styleFrom(
+                          //       primary: Colors.white,
+                          //       minimumSize: Size(110, 50)),
+                          // ),
+                          Costumbutton(
+                              buttonstat: Buttonstat(
+                                  icone: Icons.point_of_sale,
+                                  texte1: '0.00',
+                                  texte2: 'Facture')),
+                          Costumbutton(
+                              buttonstat: Buttonstat(
+                                  icone: Icons.traffic,
+                                  texte1: '0',
+                                  texte2: 'Rendez-vous')),
+
+                          Costumbutton(
+                              buttonstat: Buttonstat(
+                                  icone: Icons.money,
+                                  texte1: '0.00',
+                                  texte2: 'Requisitions')),
+                          Costumbutton(
+                              buttonstat: Buttonstat(
+                                  icone: Icons.thermostat_auto,
+                                  texte1: '0',
+                                  texte2: 'Relivrance d')),
+                          Costumbutton(
+                              buttonstat: Buttonstat(
+                                  icone: Icons.local_hospital,
+                                  texte1: '0',
+                                  texte2: 'SMS')),
+                          Costumbutton(
+                              buttonstat: Buttonstat(
+                                  icone: Icons.query_builder,
+                                  texte1: '0',
+                                  texte2: 'Annonces par SMS')),
+                          Costumbutton(
+                              buttonstat: Buttonstat(
+                                  icone: Icons.note_add,
+                                  texte1: '0',
+                                  texte2: 'PLUS')),
                           Spacer(),
                           ElevatedButton.icon(
                             onPressed: () {},
@@ -279,6 +205,9 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                         Container(
                           child: Row(
                             children: [
+                              SizedBox(
+                                width: 20,
+                              ),
                               Radio(
                                   value: 1,
                                   groupValue: _value,
@@ -311,9 +240,12 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                         ),
                         Column(
                           children: [
+                            SizedBox(
+                              width: 20,
+                            ),
                             Container(
                               width: 400,
-                              height: 150,
+                              height: 115,
                               child: Column(
                                 children: [
                                   SizedBox(
@@ -333,37 +265,43 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                   SizedBox(
                                     width: 5,
                                   ),
-                                  SizedBox(
-                                    width: 400,
-                                    child: DropdownButtonFormField(
-                                      decoration: InputDecoration(
-                                        enabledBorder: OutlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              color: Colors.grey, width: 1),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              color: Colors.grey, width: 1),
-                                        ),
-                                        filled: true,
-                                      ),
-                                      value: valueChoose,
-                                      onChanged: (newValue) {
-                                        setState(() {
-                                          valueChoose:
-                                          newValue;
-                                        });
-                                      },
-                                      items: data.map((valueItem) {
-                                        return DropdownMenuItem(
-                                          value: valueItem,
-                                          child: Text(valueItem),
-                                        );
-                                      }).toList(),
-                                    ),
-                                  ),
+                                  _value == 1
+                                      ? SizedBox(
+                                          width: 400,
+                                          child: DropdownButtonFormField(
+                                            decoration: InputDecoration(
+                                              enabledBorder: OutlineInputBorder(
+                                                //<-- SEE HERE
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey,
+                                                    width: 1),
+                                              ),
+                                              focusedBorder: OutlineInputBorder(
+                                                //<-- SEE HERE
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey,
+                                                    width: 1),
+                                              ),
+                                              filled: true,
+                                            ),
+                                            value: valueChoose,
+                                            onChanged: (newValue) {
+                                              setState(() {
+                                                valueChoose:
+                                                newValue;
+                                              });
+                                            },
+                                            items: data.map((valueItem) {
+                                              return DropdownMenuItem(
+                                                value: valueItem,
+                                                child: Text(valueItem),
+                                              );
+                                            }).toList(),
+                                          ),
+                                        )
+                                      : SizedBox(
+                                          height: 4,
+                                        )
                                 ],
                               ),
                             ),
@@ -377,39 +315,43 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                             children: [
                               Column(
                                 children: [
+                                  _value == 1
+                                      ? SizedBox(
+                                          width: 150,
+                                          child: DropdownButtonFormField(
+                                            decoration: InputDecoration(
+                                              enabledBorder: OutlineInputBorder(
+                                                //<-- SEE HERE
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey,
+                                                    width: 1),
+                                              ),
+                                              focusedBorder: OutlineInputBorder(
+                                                //<-- SEE HERE
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey,
+                                                    width: 1),
+                                              ),
+                                              filled: true,
+                                            ),
+                                            value: valueChoose,
+                                            onChanged: (newValue) {
+                                              setState(() {
+                                                valueChoose:
+                                                newValue;
+                                              });
+                                            },
+                                            items: data.map((valueItem) {
+                                              return DropdownMenuItem(
+                                                value: valueItem,
+                                                child: Text(valueItem),
+                                              );
+                                            }).toList(),
+                                          ),
+                                        )
+                                      : Text('  Adresse'),
                                   SizedBox(
-                                    width: 150,
-                                    child: DropdownButtonFormField(
-                                      decoration: InputDecoration(
-                                        enabledBorder: OutlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              color: Colors.grey, width: 1),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              color: Colors.grey, width: 1),
-                                        ),
-                                        filled: true,
-                                      ),
-                                      value: valueChoose,
-                                      onChanged: (newValue) {
-                                        setState(() {
-                                          valueChoose:
-                                          newValue;
-                                        });
-                                      },
-                                      items: data.map((valueItem) {
-                                        return DropdownMenuItem(
-                                          value: valueItem,
-                                          child: Text(valueItem),
-                                        );
-                                      }).toList(),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 140,
+                                    height: 190,
                                   ),
                                   Text('TVA')
                                 ],
@@ -420,7 +362,7 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                 children: [
                                   SizedBox(
                                       width: 400,
-                                      height: 400,
+                                      height: 290,
                                       child: Container(
                                         child: ListView(
                                           children: [
@@ -610,17 +552,17 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                     margin: const EdgeInsets.all(10.0),
                                     padding: const EdgeInsets.all(0.100),
                                     width: 200,
-                                    height: 800,
+                                    height: 500,
                                     child: ListView(
                                       children: [
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Text('Poste Occupee'),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        Text('Telephone'),
+                                        _value == 1
+                                            ?
+                                            //Text('Poste Occupe'),
+                                            SizedBox(
+                                                height: 20,
+                                                child: Text('Poste occupe'),
+                                              )
+                                            : Text('Telephone'),
                                         SizedBox(
                                           height: 20,
                                         ),
@@ -630,11 +572,11 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                         ),
                                         Text('Code par SMS'),
                                         SizedBox(
-                                          height: 20,
+                                          height: 55,
                                         ),
                                         Text('OTP Whatsapp'),
                                         SizedBox(
-                                          height: 20,
+                                          height: 55,
                                         ),
                                         Text('Courriel'),
                                         SizedBox(
@@ -663,57 +605,41 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                 children: [
                                   SizedBox(
                                       width: 400,
-                                      height: 550,
+                                      height: 520,
                                       child: Container(
                                         child: ListView(
                                           children: [
+                                            _value == 1
+                                                ? SizedBox(
+                                                    height: 40,
+                                                    child: TextFormField(
+                                                      decoration:
+                                                          InputDecoration(
+                                                        enabledBorder:
+                                                            OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                    width: 1,
+                                                                    color: Colors
+                                                                        .blueGrey)),
+                                                      ),
+                                                    ),
+                                                  )
+                                                : SizedBox(
+                                                    height: 40,
+                                                    child: TextFormField(
+                                                      decoration:
+                                                          InputDecoration(
+                                                        enabledBorder:
+                                                            OutlineInputBorder(
+                                                                borderSide: BorderSide(
+                                                                    width: 1,
+                                                                    color: Colors
+                                                                        .blueGrey)),
+                                                      ),
+                                                    ),
+                                                  ),
                                             SizedBox(
-                                              height: 40,
-                                              child: TextFormField(
-                                                decoration: InputDecoration(
-                                                  enabledBorder:
-                                                      OutlineInputBorder(
-                                                          borderSide: BorderSide(
-                                                              width: 1,
-                                                              color: Colors
-                                                                  .blueGrey)),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
-                                            SizedBox(
-                                              height: 40,
-                                              child: TextFormField(
-                                                decoration: InputDecoration(
-                                                  enabledBorder:
-                                                      OutlineInputBorder(
-                                                          borderSide: BorderSide(
-                                                              width: 1,
-                                                              color: Colors
-                                                                  .blueGrey)),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            SizedBox(
-                                              height: 40,
-                                              child: TextFormField(
-                                                decoration: InputDecoration(
-                                                  enabledBorder:
-                                                      OutlineInputBorder(
-                                                          borderSide: BorderSide(
-                                                              width: 1,
-                                                              color: Colors
-                                                                  .blueGrey)),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
+                                              height: 2,
                                             ),
                                             SizedBox(
                                               height: 40,
@@ -729,10 +655,46 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                               ),
                                             ),
                                             SizedBox(
-                                              height: 5,
+                                              height: 2,
                                             ),
                                             SizedBox(
                                               height: 40,
+                                              width: 120,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderSide: BorderSide(
+                                                              width: 1,
+                                                              color: Colors
+                                                                  .blueGrey)),
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 2,
+                                            ),
+                                            Row(
+                                              children: [
+                                                TextButton.icon(
+                                                    onPressed: () {},
+                                                    icon: Icon(Icons.upcoming),
+                                                    label:
+                                                        Text('Envoyer un SMS')),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                TextButton.icon(
+                                                    onPressed: () {},
+                                                    icon: Icon(
+                                                        Icons.phone_android),
+                                                    label:
+                                                        Text('Verifier l OTP')),
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 40,
+                                              width: 120,
                                               child: TextFormField(
                                                 decoration: InputDecoration(
                                                   filled: true,
@@ -747,6 +709,24 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                                 ),
                                               ),
                                             ),
+                                            Row(
+                                              children: [
+                                                TextButton.icon(
+                                                    onPressed: () {},
+                                                    icon: Icon(Icons.upcoming),
+                                                    label:
+                                                        Text('Envoyer un SMS')),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                TextButton.icon(
+                                                    onPressed: () {},
+                                                    icon: Icon(
+                                                        Icons.phone_android),
+                                                    label:
+                                                        Text('Verifier l OTP')),
+                                              ],
+                                            ),
                                             SizedBox(
                                               height: 5,
                                             ),
@@ -770,60 +750,6 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                               height: 40,
                                               child: TextFormField(
                                                 decoration: InputDecoration(
-                                                  enabledBorder:
-                                                      OutlineInputBorder(
-                                                          borderSide: BorderSide(
-                                                              width: 1,
-                                                              color: Colors
-                                                                  .blueGrey)),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            SizedBox(
-                                              height: 40,
-                                              child: TextFormField(
-                                                decoration: InputDecoration(
-                                                  enabledBorder:
-                                                      OutlineInputBorder(
-                                                          borderSide: BorderSide(
-                                                              width: 1,
-                                                              color: Colors
-                                                                  .blueGrey)),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            SizedBox(
-                                              height: 40,
-                                              child: TextFormField(
-                                                decoration: InputDecoration(
-                                                  filled: true,
-                                                  fillColor: Color.fromARGB(
-                                                      255, 199, 187, 187),
-                                                  enabledBorder:
-                                                      OutlineInputBorder(
-                                                          borderSide: BorderSide(
-                                                              width: 1,
-                                                              color: Colors
-                                                                  .blueGrey)),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            SizedBox(
-                                              height: 40,
-                                              child: TextFormField(
-                                                decoration: InputDecoration(
-                                                  filled: true,
-                                                  fillColor: Color.fromARGB(
-                                                      255, 199, 187, 187),
                                                   enabledBorder:
                                                       OutlineInputBorder(
                                                           borderSide: BorderSide(
@@ -927,7 +853,7 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                                                       OutlineInputBorder(
                                                     //<-- SEE HERE
                                                     borderSide: BorderSide(
-                                                        color: Colors.grey,
+                                                        color: Colors.white,
                                                         width: 1),
                                                   ),
                                                   filled: true,
@@ -1083,213 +1009,122 @@ class _Formulairedocreferent extends State<Formulairedocreferent> {
                         indexbutton == 1
                             ? TextButton.icon(
                                 onPressed: () {
-                                  // showDialog(context: context, builder: builder)
+                                  showDialog(
+                                      context: context,
+                                      builder: (_) {
+                                        return widgetsdocreferent2();
+                                      });
                                 },
                                 icon: const Icon(Icons.add),
                                 label: Text('Ajouter'),
                               )
-                            // widgetsdoctorform()
+
+                            // widgetsdocreferent2()
                             : indexbutton == 2
-                                ? SizedBox(
-                                    child: Container(
-                                      width: 900,
-                                      height: 500,
-                                      child: ListView(
-                                        children: [
-                                          SizedBox(
-                                            height: 40,
-                                          ),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              SizedBox(
-                                                child: Row(
-                                                  children: [
-                                                    SizedBox(
-                                                      child: Text('Patient'),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 150,
-                                                    ),
-                                                    SizedBox(
-                                                      child: ElevatedButton(
-                                                        onPressed: () {},
-                                                        child: Text(
-                                                            'Creer Patient'),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: 20,
-                                              ),
-                                              SizedBox(
-                                                child: Text('Docteur referent'),
-                                              ),
-                                              SizedBox(
-                                                  child: Row(
-                                                children: [
-                                                  SizedBox(
-                                                    child: Text(
-                                                        'est le medecin referent :'),
-                                                  ),
-                                                  SizedBox(
-                                                    width: 15,
-                                                  ),
-                                                  SizedBox(
-                                                    child: Checkbox(
-                                                      value: isChecked,
-                                                      activeColor:
-                                                          Colors.blueAccent,
-                                                      onChanged: (value) {
-                                                        setState(() {
-                                                          isChecked = value!;
-                                                        });
-                                                      },
-                                                    ),
-                                                  ),
-                                                ],
-                                              )),
-                                              SizedBox(
-                                                height: 20,
-                                              ),
-                                              SizedBox(
-                                                child: Text(
-                                                    '#Services ambulanciers'),
-                                              ),
-                                              SizedBox(
-                                                  child: Row(
-                                                children: [
-                                                  SizedBox(
-                                                    child: Text('chauffeur:'),
-                                                  ),
-                                                  SizedBox(
-                                                    width: 30,
-                                                  ),
-                                                  SizedBox(
-                                                    child: Checkbox(
-                                                      value: isChecked,
-                                                      activeColor:
-                                                          Colors.blueAccent,
-                                                      onChanged: (value) {
-                                                        setState(() {
-                                                          isChecked = value!;
-                                                        });
-                                                      },
-                                                    ),
-                                                  ),
-                                                ],
-                                              )),
-                                              SizedBox(
-                                                height: 20,
-                                              ),
-                                              SizedBox(
-                                                child: Text('Banque de sang'),
-                                              ),
-                                              SizedBox(
-                                                  child: Row(
-                                                children: [
-                                                  SizedBox(
-                                                    child: Text(
-                                                        'est recepteur de sang:'),
-                                                  ),
-                                                  SizedBox(
-                                                    width: 15,
-                                                  ),
-                                                  SizedBox(
-                                                    child: Checkbox(
-                                                      value: isChecked,
-                                                      activeColor:
-                                                          Colors.blueAccent,
-                                                      onChanged: (value) {
-                                                        setState(() {
-                                                          isChecked = value!;
-                                                        });
-                                                      },
-                                                    ),
-                                                  ),
-                                                ],
-                                              )),
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            width: 20,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  )
+                                ? widgetsdocreferent4()
                                 : indexbutton == 3
-                                    ? Container(
-                                        margin: const EdgeInsets.all(10.0),
-                                        padding: const EdgeInsets.all(0.100),
-                                        width: 250,
-                                        height: 800,
-                                        child: Row(
-                                          children: [
-                                            Column(
-                                              children: [
-                                                Container(
-                                                  child: ListView(
-                                                    children: [
-                                                      SizedBox(
-                                                        height: 10,
-                                                      ),
-                                                      Text('Vente'),
-                                                      SizedBox(
-                                                        height: 220,
-                                                      ),
-                                                      Text('Vendeur'),
-                                                      SizedBox(
-                                                        height: 24,
-                                                      ),
-                                                      Text(
-                                                          'Conditions de paiement'),
-                                                      SizedBox(
-                                                        height: 10,
-                                                      ),
-                                                      Text(
-                                                          'Informations fiscales'),
-                                                      SizedBox(
-                                                        height: 10,
-                                                      ),
-                                                      Text('Position fiscale'),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ))
-                                    : indexbutton == 6
-                                        ? SizedBox(
-                                            child: Row(
-                                              children: [
-                                                Text('donner la commission'),
-                                                Checkbox(
-                                                  value: isChecked,
-                                                  activeColor:
-                                                      Colors.blueAccent,
-                                                  onChanged: (value) {
-                                                    setState(() {
-                                                      isChecked = value!;
-                                                    });
-                                                  },
-                                                ),
-                                              ],
-                                            ),
-                                          )
-                                        : SizedBox()
+                                    ? widgetsdocreferent1()
+                                    : indexbutton == 4
+                                        ? widgetsdocreferent3()
+                                        : indexbutton == 5
+                                            ? Text('note interne...')
+                                            : indexbutton == 6
+                                                ? SizedBox(
+                                                    child: Row(
+                                                      children: [
+                                                        Text(
+                                                            'donner la commission'),
+                                                        Checkbox(
+                                                          value: isChecked,
+                                                          activeColor:
+                                                              Colors.blueAccent,
+                                                          onChanged: (value) {
+                                                            setState(() {
+                                                              isChecked =
+                                                                  value!;
+                                                            });
+                                                          },
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  )
+                                                : SizedBox()
                       ],
                     ),
                   ),
                 ),
               ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 120,
+                  ),
+                  TextButton(
+                      onPressed: () {}, child: Text('Envoyer un message')),
+                  TextButton(
+                      onPressed: () {}, child: Text('Enregistrer une note')),
+                  TextButton(
+                      onPressed: () {}, child: Text('Planifer une activite')),
+                  Spacer(),
+                  TextButton(onPressed: () {}, child: Text('0')),
+                  TextButton(onPressed: () {}, child: Text('Suivre')),
+                  TextButton(onPressed: () {}, child: Text('0')),
+                ],
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class Buttonstat {
+  final IconData icone;
+  final String texte1;
+  final String texte2;
+
+  const Buttonstat({
+    required this.icone,
+    required this.texte1,
+    required this.texte2,
+  });
+}
+
+class Costumbutton extends StatelessWidget {
+  const Costumbutton({Key? key, required this.buttonstat}) : super(key: key);
+  // ignore: empty_constructor_bodies
+  final Buttonstat buttonstat;
+
+  @override
+  Widget build(BuildContext context) {
+    final TextStyle textStyle = TextStyle(
+        color: Color.fromARGB(255, 197, 153, 153),
+        fontWeight: FontWeight.bold,
+        fontSize: 20);
+    return Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+      width: 150,
+      height: 45,
+      child: Row(
+        children: [
+          SizedBox(
+            width: 2,
+          ),
+          Icon(buttonstat.icone),
+          SizedBox(
+            width: 3,
+          ),
+          Column(
+            children: [
+              Text(buttonstat.texte1),
+              SizedBox(
+                width: 4,
+              ),
+              Text(buttonstat.texte2),
+            ],
+          )
+        ],
       ),
     );
   }

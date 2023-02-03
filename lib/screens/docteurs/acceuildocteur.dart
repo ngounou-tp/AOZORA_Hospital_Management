@@ -1,4 +1,5 @@
 import 'package:admin/color_constants.dart';
+import 'package:admin/screens/docteurs/diplomedocteur.dart';
 import 'package:admin/screens/docteurs/docteurreferent.dart';
 import 'package:admin/screens/docteurs/specialitedocteur.dart';
 import 'package:admin/utils/app_theme.dart';
@@ -126,7 +127,9 @@ class _AcceuildocteurState extends State<Acceuildocteur> {
                       ? Docteurreferent()
                       : indexmenu == 3
                           ? Specialitedoc()
-                          : SizedBox()
+                          : indexmenu == 4
+                              ? Diplomedocteur()
+                              : SizedBox()
             ],
           ),
         ),

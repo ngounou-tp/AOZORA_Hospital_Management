@@ -1,4 +1,5 @@
 import 'package:admin/color_constants.dart';
+import 'package:admin/screens/docteurs/creerspecialite.dart';
 import 'package:admin/utils/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -71,7 +72,8 @@ class _Specialitedoc extends State<Specialitedoc> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CreateDoctor()),
+                      MaterialPageRoute(
+                          builder: (context) => Creerspecialite()),
                     );
                   },
                   child: Text('CREER'),

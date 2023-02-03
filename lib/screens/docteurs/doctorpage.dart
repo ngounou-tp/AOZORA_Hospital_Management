@@ -86,145 +86,70 @@ class _CreateDoctorState extends State<CreateDoctor> {
                       children: [
                         Responsive.isDesktop(context)
                             ? Row(children: [
-                                ElevatedButton.icon(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.traffic,
-                                    color: Colors.grey,
-                                  ),
-                                  label: Text(
-                                    'Traitements',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                      minimumSize: Size(110, 50)),
-                                ),
-                                ElevatedButton.icon(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.point_of_sale,
-                                    color: Colors.grey,
-                                  ),
-                                  label: Text(
-                                    'Rendez-vous',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                      minimumSize: Size(110, 50)),
-                                ),
-                                ElevatedButton.icon(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.note_add,
-                                    color: Colors.grey,
-                                  ),
-                                  label: Text(
-                                    'Ordonance',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                      minimumSize: Size(110, 50)),
-                                ),
-                                ElevatedButton.icon(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.money,
-                                    color: Colors.grey,
-                                  ),
-                                  label: Text(
-                                    'Commissions',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                      minimumSize: Size(120, 50)),
-                                ),
-                                ElevatedButton.icon(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.thermostat_auto,
-                                    color: Colors.grey,
-                                  ),
-                                  label: Text(
-                                    'Chirurgie',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                      minimumSize: Size(120, 50)),
-                                ),
-                                ElevatedButton.icon(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.local_hospital,
-                                    color: Colors.grey,
-                                  ),
-                                  label: Text(
-                                    'Hospitalisation',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                      minimumSize: Size(150, 50)),
-                                ),
-                                ElevatedButton.icon(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.query_builder,
-                                    color: Colors.grey,
-                                  ),
-                                  label: Text(
-                                    'Demandes',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                      minimumSize: Size(120, 50)),
-                                ),
+                                // ElevatedButton.icon(
+                                //   onPressed: () {},
+                                //   icon: Icon(
+                                //     Icons.traffic,
+                                //     color: Colors.grey,
+                                //   ),
+                                //   label: Text(
+                                //     'Traitements',
+                                //     style: TextStyle(
+                                //       fontWeight: FontWeight.w500,
+                                //       color: Colors.grey,
+                                //     ),
+                                //   ),
+                                //   style: ElevatedButton.styleFrom(
+                                //       primary: Colors.white,
+                                //       minimumSize: Size(110, 50)),
+                                // ),
                                 SizedBox(
-                                  // width: MediaQuery.of(context.size.width),
-                                  child: ElevatedButton.icon(
-                                    onPressed: () {},
-                                    icon: Icon(
-                                      Icons.note_alt,
-                                      color: Colors.grey,
-                                    ),
-                                    label: Text(
-                                      'Resultats',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    style: ElevatedButton.styleFrom(
-                                      primary: Colors.white,
-                                    ),
-                                  ),
+                                  width: 20,
                                 ),
+
+                                Costumbutton(
+                                    buttonstat: Buttonstat(
+                                        icone: Icons.point_of_sale,
+                                        texte1: '0.',
+                                        texte2: 'Traitements')),
+                                Costumbutton(
+                                    buttonstat: Buttonstat(
+                                        icone: Icons.traffic,
+                                        texte1: '0',
+                                        texte2: 'Rendez-vous')),
+
+                                Costumbutton(
+                                    buttonstat: Buttonstat(
+                                        icone: Icons.money,
+                                        texte1: '0.',
+                                        texte2: 'Ordonance')),
+                                Costumbutton(
+                                    buttonstat: Buttonstat(
+                                        icone: Icons.thermostat_auto,
+                                        texte1: '0',
+                                        texte2: 'Commission')),
+                                Costumbutton(
+                                    buttonstat: Buttonstat(
+                                        icone: Icons.local_hospital,
+                                        texte1: '0',
+                                        texte2: 'Chirurgie')),
+                                Costumbutton(
+                                    buttonstat: Buttonstat(
+                                        icone: Icons.query_builder,
+                                        texte1: '0',
+                                        texte2: 'Hospitalisation')),
+                                Costumbutton(
+                                    buttonstat: Buttonstat(
+                                        icone: Icons.note_add,
+                                        texte1: '0',
+                                        texte2: 'Demandes d examen')),
+
+                                Costumbutton(
+                                    buttonstat: Buttonstat(
+                                        icone: Icons.note_add,
+                                        texte1: '0',
+                                        texte2: 'Resultats d examens')),
+
                                 Spacer(),
                                 ElevatedButton.icon(
                                   onPressed: () {},
@@ -850,6 +775,57 @@ class _CreateDoctorState extends State<CreateDoctor> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class Buttonstat {
+  final IconData icone;
+  final String texte1;
+  final String texte2;
+
+  const Buttonstat({
+    required this.icone,
+    required this.texte1,
+    required this.texte2,
+  });
+}
+
+class Costumbutton extends StatelessWidget {
+  const Costumbutton({Key? key, required this.buttonstat}) : super(key: key);
+  // ignore: empty_constructor_bodies
+  final Buttonstat buttonstat;
+
+  @override
+  Widget build(BuildContext context) {
+    final TextStyle textStyle = TextStyle(
+        color: Color.fromARGB(255, 197, 153, 153),
+        fontWeight: FontWeight.bold,
+        fontSize: 20);
+    return Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+      width: 150,
+      height: 45,
+      child: Row(
+        children: [
+          SizedBox(
+            width: 2,
+          ),
+          Icon(buttonstat.icone),
+          SizedBox(
+            width: 3,
+          ),
+          Column(
+            children: [
+              Text(buttonstat.texte1),
+              SizedBox(
+                width: 4,
+              ),
+              Text(buttonstat.texte2),
+            ],
+          )
+        ],
       ),
     );
   }
