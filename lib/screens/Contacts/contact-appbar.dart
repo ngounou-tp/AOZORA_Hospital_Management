@@ -1,9 +1,12 @@
 import 'package:admin/Popup%20Windows/Menu_items.dart';
 import 'package:admin/appbar_component/videoClass.dart';
 import 'package:admin/responsive.dart';
+import 'package:admin/screens/Contacts/configuration/civilites/civilite-layout.dart';
+import 'package:admin/screens/Contacts/configuration/etiquette/etiquette-layout.dart';
+import 'package:admin/screens/Contacts/configuration/industries/industrie-layout.dart';
+import 'package:admin/screens/Contacts/contact.dart';
 import 'package:admin/screens/login/login_screen.dart';
 import 'package:admin/screens/traitements/configuration/configuration.dart';
-import 'package:admin/screens/traitements/traitement/traitement.dart';
 
 import 'package:admin/utils/custom_ultility.dart';
 import 'package:flutter/material.dart';
@@ -48,8 +51,7 @@ AppBar contactAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => Traitements()),
+                          MaterialPageRoute(builder: (context) => Contacts()),
                         );
                       },
                       child: CustomText(
@@ -71,7 +73,8 @@ AppBar contactAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Configuration()),
+                                        builder: (context) =>
+                                            EtiquetteContact()),
                                   );
                                 },
                                 child: CustomText(
@@ -86,7 +89,8 @@ AppBar contactAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Configuration()),
+                                        builder: (context) =>
+                                            CiviliteLayoute()),
                                   );
                                 },
                                 child: CustomText(
@@ -101,7 +105,8 @@ AppBar contactAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Configuration()),
+                                        builder: (context) =>
+                                            IndustriLayoute()),
                                   );
                                 },
                                 child: CustomText(
@@ -231,7 +236,7 @@ AppBar contactAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Traitements()),
+                                  builder: (context) => Contacts()),
                             );
                           },
                           child: CustomText(
@@ -254,7 +259,7 @@ AppBar contactAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                Configuration()),
+                                                EtiquetteContact()),
                                       );
                                     },
                                     child: CustomText(
@@ -270,7 +275,7 @@ AppBar contactAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                Configuration()),
+                                                CiviliteLayoute()),
                                       );
                                     },
                                     child: CustomText(
@@ -286,7 +291,7 @@ AppBar contactAppBar(BuildContext context, GlobalKey<ScaffoldState>? key) =>
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                Configuration()),
+                                                IndustriLayoute()),
                                       );
                                     },
                                     child: CustomText(

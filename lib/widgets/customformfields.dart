@@ -140,6 +140,112 @@ class CustomField extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
+class CustomField4 extends StatefulWidget {
+  CustomField4({
+    Key? key,
+    required this.name,
+    required this.defaultvalue,
+    required this.dropdownitem,
+  }) : super(key: key);
+
+  final String name;
+  String defaultvalue;
+  final List<String> dropdownitem;
+
+  @override
+  State<CustomField4> createState() => _CustomField4State();
+}
+
+class _CustomField4State extends State<CustomField4> {
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double heigth = MediaQuery.of(context).size.height;
+    return Container(
+      height: heigth / 9,
+      child: Row(
+        children: [
+          CustomText(
+            text: widget.name,
+            size: Responsive.isDesktop(context)
+                ? 16
+                : Responsive.isTablet(context)
+                    ? 14
+                    : 11,
+          ),
+          Spacer(),
+          SizedBox(
+            width: width / 10,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  //<-- SEE HERE
+                  borderSide: BorderSide(color: Colors.black, width: 2),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  //<-- SEE HERE
+                  borderSide: BorderSide(color: Colors.black, width: 2),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: width / 10,
+            child: DropdownButtonFormField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  //<-- SEE HERE
+                  borderSide: BorderSide(color: Colors.black, width: 2),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  //<-- SEE HERE
+                  borderSide: BorderSide(color: Colors.black, width: 2),
+                ),
+              ),
+              value: widget.defaultvalue,
+              items: widget.dropdownitem
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: CustomText(
+                    text: value,
+                    size: Responsive.isDesktop(context)
+                        ? 16
+                        : Responsive.isTablet(context)
+                            ? 14
+                            : 11,
+                  ),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                setState(() {
+                  widget.defaultvalue = newValue!;
+                });
+              },
+            ),
+          ),
+          SizedBox(
+            width: width / 12,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  //<-- SEE HERE
+                  borderSide: BorderSide(color: Colors.black, width: 2),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  //<-- SEE HERE
+                  borderSide: BorderSide(color: Colors.black, width: 2),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class CustomField3 extends StatelessWidget {
   const CustomField3({
     Key? key,
